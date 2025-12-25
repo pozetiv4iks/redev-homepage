@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #6b6b6b;
+    min-height: 100vh;
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile {
+    height: 420px;
+    padding: 40px 30px;
+    border-radius: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile-dark {
+    width: 320px;
+    background: #4a5d4a;
+    color: #fff;
+}
+
+.tile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.tile-light {
+    width: 294px;
+    background: #fff;
+    color: #4a5d4a;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tile-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+    display: block;
+    background-image: url("material-symbols_spa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+}
+
+.tile-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    width: 250px;
+    margin-bottom: 29px;
+}
+
+.tile-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: center;
+    width: 250px;
+    opacity: 1;
+    margin-bottom: 29px;
+}
+
+.tile-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tile-dark .tile-button {
+    background: #fff;
+    color: #4a5d4a;
+    border: none;
+}
+
+.tile-dark .tile-button:hover {
+    background: #f0f0f0;
+}
+
+.tile-light .tile-button {
+    background: transparent;
+    color: #4a5d4a;
+    border: 1.5px solid #4a5d4a;
+}
+
+.tile-light .tile-button:hover {
+    background: #4a5d4a;
+    color: #fff;
+}
+
