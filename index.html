@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="section">
+            <h1 class="section__title">Buttons</h1>
+
+            <div class="section__group">
+                <h3 class="section__subtitle">Primary/Primary</h3>
+                <div class="section__row">
+                    <button class="btn btn--primary">Normal</button>
+                    <button class="btn btn--primary btn--disabled" disabled>Disable</button>
+                </div>
+            </div>
+
+            <div class="section__group">
+                <h3 class="section__subtitle">Primary/Secondary</h3>
+                <div class="section__row">
+                    <button class="btn btn--secondary">Normal</button>
+                    <button class="btn btn--secondary btn--disabled" disabled>Disable</button>
+                </div>
+            </div>
+
+            <div class="section__group">
+                <h3 class="section__subtitle">Simple Buttons</h3>
+                <div class="section__row">
+                    <a href="#" class="btn-simple btn-simple--green">Normal →</a>
+                    <a href="#" class="btn-simple btn-simple--red">Normal →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h1 class="section__title">Form elements</h1>
+
+            <div class="section__group">
+                <h3 class="section__subtitle">Input Field</h3>
+                <div class="section__row">
+                    <input type="text" class="input" placeholder="Normal">
+                </div>
+            </div>
+
+            <div class="section__group">
+                <h3 class="section__subtitle">Dropdown Item</h3>
+                
+                <p class="section__label">Default Item</p>
+                <div class="dropdown">
+                    <div class="dropdown__item">Normal</div>
+                    <div class="dropdown__item dropdown__item--disabled">Disable</div>
+                </div>
+
+                <p class="section__label">Category Item</p>
+                <div class="dropdown">
+                    <div class="dropdown__item dropdown__item--category">
+                        <span class="dropdown__icon"></span>
+                        Normal
+                    </div>
+                    <div class="dropdown__item dropdown__item--category dropdown__item--disabled">
+                        <span class="dropdown__icon"></span>
+                        Disable
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
