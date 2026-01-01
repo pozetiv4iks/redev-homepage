@@ -22,16 +22,17 @@ body {
 
 .tile-dark {
     max-width: 320px;
-    background: #4a5d4a;
+    background: #485C46;
     color: #fff;
     padding: 70px 35px;
 }
 
 .tile-light {
-    width: 294px;
+    max-width: 294px;
     background: #fff;
-    color: #4a5d4a;
+    color: #485C46;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 35px;
 }
 
 .tile-icon {
@@ -39,11 +40,6 @@ body {
     height: 80px;
     margin-bottom: 16px;
     display: block;
-    background-image: url("material-symbols_spa.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 1;
 }
 
 .tile-title {
@@ -52,6 +48,14 @@ body {
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 30px;
+}
+
+.tile-light .tile-title {
+    margin-bottom: 25px;
+}
+
+.tile-light .tile-description {
+    color: #343A40;
 }
 
 .tile-description {
@@ -74,8 +78,12 @@ body {
 
 .tile-dark .tile-button {
     background: #fff;
-    color: #4a5d4a;
+    color: #485C46;
     border: none;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    padding: 16px 24px;
 }
 
 .tile-dark .tile-button:hover {
@@ -84,12 +92,17 @@ body {
 
 .tile-light .tile-button {
     background: transparent;
-    color: #4a5d4a;
-    border: 1.5px solid #4a5d4a;
+    color: #485C46;
+    border: 2px solid #485C46;
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
 
 .tile-light .tile-button:hover {
-    background: #4a5d4a;
+    background: #485C46;
     color: #fff;
 }
 
