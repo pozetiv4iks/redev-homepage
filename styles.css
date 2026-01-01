@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #6b6b6b;
+    min-height: 100vh;
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile {
+    border-radius: 24px;
+    text-align: center;
+}
+
+.tile-dark {
+    max-width: 320px;
+    background: #485C46;
+    color: #fff;
+    padding: 70px 35px;
+}
+
+.tile-light {
+    max-width: 294px;
+    background: #fff;
+    color: #485C46;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 35px;
+}
+
+.tile-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 16px;
+    display: block;
+}
+
+.tile-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 30px;
+}
+
+.tile-light .tile-title {
+    margin-bottom: 25px;
+}
+
+.tile-light .tile-description {
+    color: #343A40;
+}
+
+.tile-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
+.tile-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tile-dark .tile-button {
+    background: #fff;
+    color: #485C46;
+    border: none;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    padding: 16px 24px;
+}
+
+.tile-dark .tile-button:hover {
+    background: #f0f0f0;
+}
+
+.tile-light .tile-button {
+    background: transparent;
+    color: #485C46;
+    border: 2px solid #485C46;
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.tile-light .tile-button:hover {
+    background: #485C46;
+    color: #fff;
+}
+
