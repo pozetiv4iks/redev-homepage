@@ -127,8 +127,8 @@ h3 {
 }
 
 .plans-header {
-    max-width: 600px;
-    margin: 0 auto 40px;
+    max-width: 639px;
+    margin: 0 auto 60px;
     text-align: center;
 }
 
@@ -142,12 +142,13 @@ h3 {
 .plans-subtitle {
     color: #aaa;
     font-size: 1rem;
+    line-height: 1.6;
 }
 
 .plans-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 24px;
 }
 
 .plan-card {
@@ -158,10 +159,11 @@ h3 {
     color: #fff;
 }
 
-.plan-card h2 {
+.plan-card-title {
     color: #fff;
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    line-height: 1.2;
 }
 
 .plan-card p {
@@ -176,7 +178,7 @@ h3 {
     border-color: #FFFFFF;
 }
 
-.plan-card.premium h2,
+.plan-card.premium .plan-card-title,
 .plan-card.premium p {
     color: #000;
 }
