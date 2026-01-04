@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form class="filters">
+            <h2 class="filters__title">Фильтры</h2>
+            
+            <div class="filters__section">
+                <h3 class="filters__heading">ПОКАЗАТЬ ЦЕНУ</h3>
+                <div class="filters__radios">
+                    <label class="filters__radio">
+                        <input type="radio" name="price" checked>
+                        <span class="filters__radio-custom"></span>
+                        на человека
+                    </label>
+                    <label class="filters__radio">
+                        <input type="radio" name="price">
+                        <span class="filters__radio-custom"></span>
+                        на всех
+                    </label>
+                </div>
+            </div>
+
+            <div class="filters__section">
+                <h3 class="filters__heading">ЕДА</h3>
+                <div class="filters__checkboxes">
+                    <label class="filters__checkbox">
+                        <input type="checkbox" name="food">
+                        <span class="filters__checkbox-custom"></span>
+                        2-х разовое питание
+                    </label>
+                    <label class="filters__checkbox">
+                        <input type="checkbox" name="food" checked>
+                        <span class="filters__checkbox-custom"></span>
+                        3-разовое питание
+                    </label>
+                    <label class="filters__checkbox">
+                        <input type="checkbox" name="food">
+                        <span class="filters__checkbox-custom"></span>
+                        Все включено
+                    </label>
+                    <label class="filters__checkbox">
+                        <input type="checkbox" name="food">
+                        <span class="filters__checkbox-custom"></span>
+                        Без еды
+                    </label>
+                    <label class="filters__checkbox">
+                        <input type="checkbox" name="food">
+                        <span class="filters__checkbox-custom"></span>
+                        Завтраки
+                    </label>
+                </div>
+            </div>
+        </form>
+
+        <form class="form">
+            <h2 class="form__title">БУДЕМ РАДЫ<br><em>ВАШЕМУ</em> ОТЗЫВУ</h2>
+            
+            <div class="form__groups">
+                <div class="form__group">
+                    <label class="form__label" for="nameSurname">Имя и Фамилия</label>
+                    <input id="nameSurname" class="form__input" type="text" placeholder="Александра Иванова">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="city">Откуда вы</label>
+                    <input id="city" class="form__input" type="text" placeholder="Москва">
+                </div>
+            </div>
+
+            <div class="form__groups">
+                <div class="form__group">
+                    <label class="form__label" for="date">Когда летали (дата)</label>
+                    <input id="date" class="form__input" type="text" placeholder="10.10.23">
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="destination">Куда летали (страна и отель)</label>
+                    <input id="destination" class="form__input" type="text" placeholder="Бали, Hanging Gardens">
+                </div>
+            </div>
+
+            <div class="form__group form__group--full">
+                <label class="form__label" for="review">Напишите отзыв</label>
+                <textarea id="review" class="form__textarea" placeholder="Текст"></textarea>
+            </div>
+
+            <button type="submit" class="form__button">ОТПРАВИТЬ</button>
+        </form>
+    </div>
+</body>
+</html>
