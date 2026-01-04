@@ -119,33 +119,33 @@ h3 {
     border-radius: 8px;
 }
 
-.section-plans {
+.plans {
     background: #0a0a0a;
     padding: 60px 40px;
     border-radius: 16px;
     margin-bottom: 50px;
 }
 
-.plans-header {
+.plans__header {
     max-width: 639px;
     margin: 0 auto 60px;
     text-align: center;
 }
 
-.plans-title {
+.plans__title {
     font-size: 3rem;
     color: #fff;
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-.plans-subtitle {
+.plans__subtitle {
     color: #aaa;
     font-size: 1rem;
     line-height: 1.6;
 }
 
-.plans-grid {
+.plans__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
@@ -159,26 +159,26 @@ h3 {
     color: #fff;
 }
 
-.plan-card-title {
+.plan-card__title {
     color: #fff;
     font-size: 2rem;
     margin-bottom: 16px;
     line-height: 1.2;
 }
 
-.plan-card p {
+.plan-card__text {
     color: #ddd;
     line-height: 1.6;
     font-size: 1rem;
 }
 
-.plan-card.premium {
+.plan-card--premium {
     grid-column: 1 / -1;
     background: #F5AA21;
     border-color: #FFFFFF;
 }
 
-.plan-card.premium .plan-card-title,
-.plan-card.premium p {
+.plan-card--premium .plan-card__title,
+.plan-card--premium .plan-card__text {
     color: #000;
 }
