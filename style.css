@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0F0F0F;
+    min-height: 100vh;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.hero {
+    width: 100%;
+    max-width: 1584px;
+}
+
+.hero__card {
+    background-color: #C2B4A3;
+    border-radius: 20px;
+    padding: 100px 142px 100px 100px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+    min-height: 340px;
+}
+
+.hero__card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    width: 623px;
+    height: 623px;
+    border-radius: 50%;
+    border: 60px solid #b8a894;
+    opacity: 0.5;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1033px;
+}
+
+.hero__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #0F0F0F;
+}
+
+.hero__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #1F1F1F;
+}
+
+.hero__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: #1F1F1F;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 18px 24px;
+    border-radius: 12px;
+    width: auto;
+}
+
+.hero__button:hover {
+    background-color: #0F0F0F;
+}
+
+.hero__button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.hero__button--mobile {
+    display: none;
+}
+
+.hero__button--desktop {
+    display: flex;
+}
+
+.hero__decoration {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .hero__card {
+        padding: 80px 100px;
+        gap: 100px;
+    }
+
+    .hero__card::before {
+        width: 500px;
+        height: 500px;
+        right: -80px;
+    }
+
+    .hero__title {
+        font-size: 50px;
+    }
+
+    .hero__text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero__card {
+        padding: 60px 80px;
+        gap: 80px;
+        min-height: 300px;
+    }
+
+    .hero__card::before {
+        width: 450px;
+        height: 450px;
+        right: -60px;
+    }
+
+    .hero__title {
+        font-size: 44px;
+    }
+
+    .hero__text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 24px;
+    }
+
+    .hero__card {
+        flex-direction: column;
+        padding: 40px;
+        gap: 32px;
+        min-height: auto;
+    }
+
+    .hero__card::before {
+        width: 300px;
+        height: 300px;
+        top: -50px;
+        right: -50px;
+        transform: none;
+    }
+
+    .hero__content {
+        gap: 12px;
+    }
+
+    .hero__title {
+        font-size: 38px;
+    }
+
+    .hero__text {
+        font-size: 15px;
+    }
+
+    .hero__button--mobile {
+        display: flex;
+        width: 100%;
+    }
+
+    .hero__button--desktop {
+        display: none;
+    }
+
+    .hero__decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .main {
+        padding: 16px;
+    }
+
+    .hero__card {
+        padding: 32px 24px;
+        gap: 24px;
+        min-height: 367px;
+        border-radius: 16px;
+    }
+
+    .hero__card::before {
+        width: 200px;
+        height: 200px;
+        top: -30px;
+        right: -30px;
+        border-width: 30px;
+    }
+
+    .hero__content {
+        gap: 10px;
+    }
+
+    .hero__title {
+        font-size: 32px;
+    }
+
+    .hero__text {
+        font-size: 14px;
+    }
+
+    .hero__button {
+        padding: 16px 20px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+}
