@@ -3,9 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Ignacio Lang - Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <section class="hero-background">
+    <div class="hero-overlay"></div>
+  </section>
+  <main class="container">
+    <figure class="profile-card">
+      <div class="img-block">
+        <picture class="bg-picture">
+          <source media="(max-width: 768px)" srcset="bg.png">
+          <source media="(min-width: 769px)" srcset="bg.png">
+          <img 
+            src="bg.png" 
+            alt="Abstract dark background with smooth curves" 
+            loading="lazy"
+            class="bg-image"
+          >
+        </picture>
+        <div class="social-icons">
+          <a href="#" class="social-circle" aria-label="Facebook">
+            <img src="facebook.png" alt="Facebook" loading="lazy">
+          </a>
+          <a href="#" class="social-circle" aria-label="Twitter">
+            <img src="twitter.png" alt="LinkedIn" loading="lazy">
+          </a>
+          <a href="#" class="social-circle" aria-label="LinkedIn">
+            <img src="linkedin.png" alt="LinkedIn" loading="lazy">
+          </a>
+          <a href="#" class="social-circle" aria-label="Instagram">
+            <img src="instagram.png" alt="Instagram" loading="lazy">
+          </a>
+        </div>
+      </div>
+      <figcaption class="name-block">
+        <h1 class="name">Ignacio Lang</h1>
+        <p class="title">Founder & Lead Mechanic</p>
+      </figcaption>
+    </figure>
+  </main>
 </body>
 </html>
