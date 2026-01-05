@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O2 Plants Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+  <section class="plants-section">
+    <div class="swiper plants-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <article class="plant-card">
+            <div class="plant-image">
+              <img src="image.png" alt="Plant in pot" loading="lazy">
+            </div>
+            <div class="plant-content">
+              <h2 class="plant-title">We Have Small And Best O2 Plants Collection's</h2>
+              <p class="plant-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+              <p class="plant-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a href="#" class="explore-btn">Explore</a>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-slide">
+          <article class="plant-card">
+            <div class="plant-image">
+              <img src="image.png" alt="Plant in pot" loading="lazy">
+            </div>
+            <div class="plant-content">
+              <h2 class="plant-title">We Have Small And Best O2 Plants Collection's</h2>
+              <p class="plant-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+              <p class="plant-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a href="#" class="explore-btn">Explore</a>
+            </div>
+          </article>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <article class="plant-card">
+            <div class="plant-image">
+              <img src="image.png" alt="Plant in pot" loading="lazy">
+            </div>
+            <div class="plant-content">
+              <h2 class="plant-title">We Have Small And Best O2 Plants Collection's</h2>
+              <p class="plant-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+              <p class="plant-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a href="#" class="explore-btn">Explore</a>
+            </div>
+          </article>
+        </div>
+      </div>
+      
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.plants-swiper', {
+      loop: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+    });
+  </script>
+</body>
+</html>
+
