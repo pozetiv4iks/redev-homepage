@@ -32,8 +32,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 150px;
-    min-height: 340px;
 }
 
 .hero__card::before {
@@ -72,9 +72,7 @@ body {
 .hero__text {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 400;
     line-height: 150%;
-    letter-spacing: 0%;
     color: #1F1F1F;
 }
 
@@ -86,12 +84,13 @@ body {
     background-color: #1F1F1F;
     color: #fff;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
+    line-height: 120%;
     padding: 18px 24px;
     border-radius: 12px;
-    width: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .hero__button:hover {
@@ -101,21 +100,6 @@ body {
 .hero__button-icon {
     width: 20px;
     height: 20px;
-}
-
-.hero__button--mobile {
-    display: none;
-}
-
-.hero__button--desktop {
-    display: flex;
-}
-
-.hero__decoration {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
 }
 
 @media (max-width: 1200px) {
@@ -143,7 +127,6 @@ body {
     .hero__card {
         padding: 60px 80px;
         gap: 80px;
-        min-height: 300px;
     }
 
     .hero__card::before {
@@ -193,17 +176,8 @@ body {
         font-size: 15px;
     }
 
-    .hero__button--mobile {
-        display: flex;
+    .hero__button {
         width: 100%;
-    }
-
-    .hero__button--desktop {
-        display: none;
-    }
-
-    .hero__decoration {
-        display: none;
     }
 }
 
@@ -240,8 +214,8 @@ body {
     }
 
     .hero__button {
-        padding: 16px 20px;
-        font-size: 14px;
-        border-radius: 10px;
+        padding: 14px 20px;
+        gap: 2px;
+        border-radius: 8px;
     }
 }
