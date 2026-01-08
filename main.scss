@@ -1,0 +1,179 @@
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary;
+    background-color: $color-bg-dark;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter {
+    width: 100%;
+    max-width: 1750px;
+    margin: 0 auto;
+    min-height: 511px;
+    padding: 0 $spacing-xl;
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include flex-center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $color-bg-overlay;
+    }
+
+    @include respond-to(md) {
+        min-height: 400px;
+        padding: 40px 20px;
+    }
+
+    @include respond-to(sm) {
+        min-height: 350px;
+        padding: 32px $spacing-md;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        @include flex-column-center;
+        gap: $spacing-lg;
+        max-width: 959px;
+        width: 100%;
+
+        @include respond-to(md) {
+            gap: 20px;
+        }
+    }
+
+    &__text {
+        @include flex-column-center;
+        gap: $spacing-sm;
+        width: 100%;
+    }
+
+    &__title {
+        @include text-h1;
+        color: $color-text-light;
+        max-width: 959px;
+
+        @include respond-to(xl) {
+            font-size: 42px;
+        }
+
+        @include respond-to(lg) {
+            font-size: 36px;
+        }
+
+        @include respond-to(md) {
+            font-size: 32px;
+        }
+
+        @include respond-to(sm) {
+            font-size: 28px;
+        }
+    }
+
+    &__subtitle {
+        @include text-h5;
+        color: $color-text-light;
+        max-width: 674px;
+
+        @include respond-to(lg) {
+            font-size: 18px;
+        }
+
+        @include respond-to(md) {
+            font-size: 16px;
+        }
+
+        @include respond-to(sm) {
+            font-size: 14px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        gap: $spacing-xs;
+        max-width: 653px;
+        width: 100%;
+        height: 48px;
+
+        @include respond-to(md) {
+            flex-direction: column;
+            height: auto;
+            gap: 12px;
+        }
+    }
+
+    &__input {
+        flex: 1;
+        max-width: 527px;
+        height: 48px;
+        padding: $spacing-md;
+        background: $color-white;
+        border: 1px solid $color-border;
+        border-radius: $radius-none;
+        font-family: $font-primary;
+        font-size: $font-size-body;
+        outline: none;
+
+        &::placeholder {
+            color: $color-placeholder;
+        }
+
+        &:focus {
+            border-color: $color-black;
+        }
+
+        @include respond-to(md) {
+            max-width: 100%;
+            border-radius: $radius-sm;
+        }
+    }
+
+    &__button {
+        @include button-base;
+        min-width: 126px;
+        height: 48px;
+        padding: $spacing-sm $spacing-md;
+        background: $color-black;
+        color: $color-text-light;
+        font-family: $font-primary;
+        font-size: $font-size-body;
+        font-weight: 500;
+        line-height: 120%;
+        border: 1px solid $color-border;
+        border-radius: $radius-none;
+        box-shadow: 
+            0px 1px 2px 0px rgba(0, 0, 0, 0.12),
+            0px -1px 0px 0px rgba(0, 0, 0, 0.08) inset;
+
+        &:hover {
+            background: color.adjust($color-black, $lightness: 15%);
+        }
+
+        @include respond-to(md) {
+            width: 100%;
+            border-radius: $radius-sm;
+        }
+    }
+
+    &__button-icon {
+        width: 16px;
+        height: 16px;
+    }
+}

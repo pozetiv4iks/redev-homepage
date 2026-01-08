@@ -1,0 +1,35 @@
+$color-bg-dark: #0F0F0F;
+$color-bg-overlay: rgba(0, 0, 0, 0.49);
+$color-white: #FFFFFF;
+$color-black: #010101;
+$color-border: #E7E7E7;
+$color-text-dark: #1F1F1F;
+$color-text-light: #FFFFFF;
+$color-placeholder: #010101;
+
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Inter', sans-serif;
+
+$font-size-h1: 48px;
+$font-size-h5: 20px;
+$font-size-body: 16px;
+
+$line-height-h1: 125%;
+$line-height-h5: 160%;
+
+$spacing-xs: 6px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 25px;
+
+$radius-none: 0;
+$radius-sm: 8px;
+$radius-md: 12px;
+
+$breakpoints: (
+    xl: 1200px,
+    lg: 1024px,
+    md: 768px,
+    sm: 375px
+);
