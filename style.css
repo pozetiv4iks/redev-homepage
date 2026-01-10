@@ -10,23 +10,27 @@ body {
   min-height: 100vh;
 }
 
-.plants-section {
+.plants {
   width: 100%;
   min-height: 100vh;
-  padding: 60px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.plants-swiper {
+.container {
   width: 100%;
-  max-width: 1600px;
-  padding: 40px 20px 80px;
+  padding: 20px;
+  margin-left: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.plants__slider {
+  width: 100%;
   overflow: visible;
 }
 
-.plants-swiper .swiper-wrapper {
+.plants__slider .swiper-wrapper {
   overflow: visible;
 }
 
@@ -35,7 +39,7 @@ body {
   overflow: visible;
 }
 
-.plant-card {
+.plants__card {
   display: flex;
   align-items: center;
   background: linear-gradient(
@@ -55,7 +59,7 @@ body {
   overflow: visible;
 }
 
-.plant-image {
+.plants__image {
   position: absolute;
   left: -50px;
   top: 50%;
@@ -65,7 +69,7 @@ body {
   z-index: 10;
 }
 
-.plant-image img {
+.plants__image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -78,7 +82,7 @@ body {
     drop-shadow(0px -98px 80px rgba(0, 0, 0, 0.17));
 }
 
-.plant-content {
+.plants__content {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -86,58 +90,50 @@ body {
   margin-left: 400px;
 }
 
-.plant-title {
-  font-family: 'Inter', sans-serif;
+.plants__title {
   font-weight: 600;
   font-size: 38px;
-  line-height: 46px;
-  letter-spacing: 0%;
+  line-height: 1.2;
   color: #ffffff;
-  width: 699px;
-  max-width: 100%;
+  width: 100%;
 }
 
-.plant-description {
-  font-family: 'Inter', sans-serif;
+.plants__description {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.8);
-  width: 500px;
-  max-width: 100%;
+  width: 100%;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.explore-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 217px;
-  height: 64px;
+.plants__btn {
+  max-width: 217px;
+  padding: 16px 0;
   border: 2px solid #ffffff;
   border-radius: 12px;
   color: #ffffff;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  text-align: center;
   font-weight: 400;
   font-size: 28px;
-  line-height: 100%;
+  line-height: 1;
   opacity: 0.75;
   transition: all 0.3s ease;
   margin-top: 10px;
 }
 
 /* Swiper Pagination */
-.plants-section .swiper-pagination {
+.plants .swiper-pagination {
   position: relative !important;
   bottom: auto !important;
   margin-top: 40px;
 }
 
-.plants-section .swiper-pagination-bullet {
+.plants .swiper-pagination-bullet {
   width: 11px !important;
   height: 11px !important;
   border-radius: 50% !important;
@@ -147,7 +143,7 @@ body {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.plants-section .swiper-pagination-bullet-active {
+.plants .swiper-pagination-bullet-active {
   width: 11px !important;
   height: 11px !important;
   border-radius: 50% !important;
@@ -158,80 +154,79 @@ body {
 
 
 @media (max-width: 1400px) {
-  .plant-card {
+  .plants__card {
     height: 650px;
     border-radius: 70px;
     padding-left: 300px;
   }
   
-  .plant-image {
+  .plants__image {
     width: 700px;
     height: 700px;
     left: -30px;
   }
   
-  .plant-content {
+  .plants__content {
     margin-left: 300px;
   }
   
-  .plant-title {
+  .plants__title {
     font-size: 32px;
     line-height: 40px;
     width: 550px;
   }
   
-  .plant-description {
+  .plants__description {
     width: 450px;
   }
 }
 
 @media (max-width: 1200px) {
-  .plant-card {
+  .plants__card {
     height: 550px;
     border-radius: 50px;
     padding: 50px;
     padding-left: 280px;
   }
   
-  .plant-image {
+  .plants__image {
     width: 550px;
     height: 550px;
     left: -20px;
   }
   
-  .plant-content {
+  .plants__content {
     margin-left: 200px;
     gap: 16px;
   }
   
-  .plant-title {
+  .plants__title {
     font-size: 28px;
     line-height: 36px;
     width: 450px;
   }
   
-  .plant-description {
+  .plants__description {
     font-size: 15px;
     width: 400px;
   }
   
-  .explore-btn {
-    width: 180px;
-    height: 54px;
+  .plants__btn {
+    max-width: 180px;
     font-size: 22px;
   }
 }
 
 @media (max-width: 992px) {
-  .plants-section {
+  .plants {
     padding: 80px 20px 40px;
   }
   
-  .plants-swiper {
+  .plants__slider {
     padding: 40px 20px 60px;
   }
   
-  .plant-card {
+  .plants__card {
     flex-direction: column;
     justify-content: flex-end;
     height: auto;
@@ -241,7 +236,7 @@ body {
     border-radius: 40px;
   }
   
-  .plant-image {
+  .plants__image {
     left: 50%;
     top: -50px;
     transform: translateX(-50%);
@@ -249,43 +244,42 @@ body {
     height: 300px;
   }
   
-  .plant-content {
+  .plants__content {
     margin-left: 0;
     text-align: center;
     align-items: center;
     max-width: 100%;
   }
   
-  .plant-title {
+  .plants__title {
     font-size: 26px;
     line-height: 34px;
     width: 100%;
     max-width: 500px;
   }
   
-  .plant-description {
+  .plants__description {
     width: 100%;
     max-width: 450px;
     text-align: center;
   }
   
-  .explore-btn {
-    width: 180px;
-    height: 52px;
+  .plants__btn {
+    max-width: 180px;
     font-size: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .plants-section {
+  .plants {
     padding: 60px 15px 30px;
   }
   
-  .plants-swiper {
+  .plants__slider {
     padding: 30px 15px 50px;
   }
   
-  .plant-card {
+  .plants__card {
     min-height: 450px;
     padding: 30px 25px;
     padding-top: 180px;
@@ -293,111 +287,108 @@ body {
     border-width: 2px;
   }
   
-  .plant-image {
+  .plants__image {
     top: -40px;
     width: 250px;
     height: 250px;
   }
   
-  .plant-content {
+  .plants__content {
     gap: 14px;
   }
   
-  .plant-title {
+  .plants__title {
     font-size: 22px;
     line-height: 28px;
   }
   
-  .plant-description {
+  .plants__description {
     font-size: 14px;
     -webkit-line-clamp: 2;
   }
   
-  .explore-btn {
-    width: 160px;
-    height: 48px;
+  .plants__btn {
+    max-width: 160px;
     font-size: 18px;
     border-radius: 10px;
   }
   
-  .plants-section .swiper-pagination {
+  .plants .swiper-pagination {
     margin-top: 30px;
   }
 }
 
 @media (max-width: 576px) {
-  .plants-section {
+  .plants {
     padding: 50px 10px 20px;
   }
   
-  .plant-card {
+  .plants__card {
     min-height: 420px;
     padding: 25px 20px;
     padding-top: 160px;
     border-radius: 24px;
   }
   
-  .plant-image {
+  .plants__image {
     top: -35px;
     width: 210px;
     height: 210px;
   }
   
-  .plant-content {
+  .plants__content {
     gap: 12px;
   }
   
-  .plant-title {
+  .plants__title {
     font-size: 20px;
     line-height: 26px;
   }
   
-  .plant-description {
+  .plants__description {
     font-size: 13px;
     line-height: 1.5;
   }
   
-  .explore-btn {
-    width: 150px;
-    height: 44px;
+  .plants__btn {
+    max-width: 150px;
     font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .plant-card {
+  .plants__card {
     min-height: 380px;
     padding: 20px 15px;
     padding-top: 140px;
     border-radius: 20px;
   }
   
-  .plant-image {
+  .plants__image {
     top: -30px;
     width: 170px;
     height: 170px;
   }
   
-  .plant-title {
+  .plants__title {
     font-size: 18px;
     line-height: 24px;
   }
   
-  .plant-description {
+  .plants__description {
     font-size: 12px;
   }
   
-  .explore-btn {
-    width: 140px;
-    height: 42px;
+  .plants__btn {
+    max-width: 140px;
     font-size: 15px;
   }
   
-  .plants-section .swiper-pagination {
+  .plants .swiper-pagination {
     margin-top: 20px;
   }
   
-  .plants-section .swiper-pagination-bullet {
+  .plants .swiper-pagination-bullet {
     width: 9px !important;
     height: 9px !important;
   }
