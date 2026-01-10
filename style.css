@@ -62,12 +62,6 @@ body {
   border-radius: 12px 12px 0 0;
 }
 
-.bg-picture {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 .bg-image {
   width: 800px;
   height: 532px;
