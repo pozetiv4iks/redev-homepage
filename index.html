@@ -1,188 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <div class="logo">
-
-        </div>
-        <nav>
-
-        </nav>
-        <button>
-
-        </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>NeoFi</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="logo.png" alt="logo" />
+        <span>NeoFi</span>
+      </div>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Testimonial</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+      <button class="header__btn">Sign Up</button>
+      <button class="header__burger" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
-    <main>
-        <div class="hero">
-            <div class="hero-container">
-                <div class="content">
-                    <div class="left">
-                        <div class="contein">
-                            <div class="patch">
-                                <div class="elipse"></div>
-                            </div>
-                        </div>
-                        <div class="hero-buttons">
-                            <button type="button" class="first"></button>
-                            <button type="button" class="second"></button>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <img src="Shape-2.png" alt="shape">
-                    </div>
-                </div>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__content">
+            <div class="hero__left">
+              <div class="hero__badge">
+                <span class="hero__badge-dot"></span>
+                <span class="hero__badge-text">Decentralised</span>
+              </div>
+              <h1 class="hero__title">Revolutionizing<br> Web3 Finance</h1>
+              <p class="hero__text">Secure, scalable, and decentralized solutions<br> for your digital assets—experience the future<br> of financial freedom.</p>
+              <div class="hero__buttons">
+                <button
+                  type="button"
+                  class="hero__btn hero__btn--primary"
+                >Get Started</button>
+                <button
+                  type="button"
+                  class="hero__btn hero__btn--secondary"
+                >Watch video</button>
+              </div>
             </div>
+            <div class="hero__right">
+              <img src="Shape-2.png" alt="shape" class="hero__image" />
+            </div>
+          </div>
         </div>
-        <div class="brands">
-            <div class="logo-partner">
-                <div class="brand"></div>
-                <div class="brand"></div>
-                <div class="brand"></div>
-                <div class="brand"></div>
-                <div class="brand"></div>
-            </div>
+      </section>
+
+      <section class="brands">
+        <div class="brands__container">
+          <div class="brands__item"></div>
+          <div class="brands__item"></div>
+          <div class="brands__item"></div>
+          <div class="brands__item"></div>
+          <div class="brands__item"></div>
         </div>
-        <div class="featurs">
-            <div class="contein">
-                <div class="batch"></div>
-            </div>
-            <div class="row">
-                <div class="card">
-                    <img src="Icons.png" alt="svg">
-                </div>
-                <div class="card">
-                    <img src="Icons-2.png" alt="svg">
-                </div>
-                <div class="card">
-                    <img src="Icons-3.png" alt="svg">
-                </div>
-            </div>
+      </section>
+
+      <section class="features">
+        <div class="features__header">
+          <div class="features__badge"></div>
         </div>
-        <div class="stat">
-            <div class="conteiner">
-                <div class="contein">
-                    <div class="batch"></div>
-                </div>
-                <div class="statistic">
-                    <div class="stat-card"></div>
-                    <div class="stat-card"></div>
-                    <div class="stat-card"></div>
-                </div>
-            </div>
+        <div class="features__row">
+          <div class="features__card">
+            <img src="Icons.png" alt="icon" class="features__icon" />
+          </div>
+          <div class="features__card">
+            <img src="Icons-2.png" alt="icon" class="features__icon" />
+          </div>
+          <div class="features__card">
+            <img src="Icons-3.png" alt="icon" class="features__icon" />
+          </div>
         </div>
-        <div class="more-features">
-            <div class="contain">
-                <div class="batch"></div>
+      </section>
+
+      <section class="stats">
+        <div class="stats__container">
+          <div class="stats__header">
+            <div class="stats__badge"></div>
+          </div>
+          <div class="stats__row">
+            <div class="stats__card"></div>
+            <div class="stats__card"></div>
+            <div class="stats__card"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__header">
+          <div class="advantages__badge"></div>
+        </div>
+        <div class="advantages__container">
+          <div class="advantages__image">
+            <img src="Shape-1.png" alt="shape" />
+          </div>
+          <div class="advantages__list">
+            <div class="advantages__item">
+              <img
+                src="flow-connection.png"
+                alt="flow-connection"
+                class="advantages__icon"
+              />
+              <div class="advantages__text"></div>
             </div>
-            <div class="container">
-                <div class="rigth-content">
-                    <img src="Shape-1.png" alt="shape1">
+            <div class="advantages__item">
+              <img src="security.png" alt="security" class="advantages__icon" />
+              <div class="advantages__text"></div>
+            </div>
+            <div class="advantages__item">
+              <img
+                src="blockchain.png"
+                alt="blockchain"
+                class="advantages__icon"
+              />
+              <div class="advantages__text"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="testimonials__header">
+          <div class="testimonials__badge"></div>
+        </div>
+        <div class="testimonials__slider">
+          <div class="testimonials__overlay testimonials__overlay--left"></div>
+          <div class="testimonials__overlay testimonials__overlay--right"></div>
+          <div class="testimonials__cards">
+            <div class="testimonials__card">
+              <div class="testimonials__author">
+                <div class="testimonials__avatar">
+                  <img src="man.jpg" alt="man" />
                 </div>
-                <div class="left-content">
-                    <div class="item">
-                        <div class="secure">
-                            <img src="flow-connection.png" alt="flow-connection" class="item-img">
-                            <div class="item-content"></div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="secure">
-                            <img src="security.png" alt="flow-connection" class="item-img">
-                            <div class="item-content"></div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="secure">
-                            <img src="blockchain.png" alt="flow-connection" class="item-img">
-                            <div class="item-content"></div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+            <div class="testimonials__card">
+              <div class="testimonials__author">
+                <div class="testimonials__avatar">
+                  <img src="man.jpg" alt="man" />
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="testimonial">
-            <div class="test-content">
-                <div class="batch"></div>
-            </div>
-            <div class="clip">
-                <div class="overlay"></div>
-                <div class="overlay"></div>
-                <div class="container-clip">
-                    <div class="col-card">
-                        <div class="name">
-                            <div class="elipse">
-                                <img src="man.jpg" alt="man">
-                            </div>
-                            
-                        </div>
-                    </div><div class="col-card">
-                        <div class="name">
-                            <div class="elipse">
-                                <img src="man.jpg" alt="man">
-                            </div>
-                            
-                        </div>
-                    </div><div class="col-card">
-                        <div class="name">
-                            <div class="elipse">
-                                <img src="man.jpg" alt="man">
-                            </div>
-                            
-                        </div>
-                    </div><div class="col-card">
-                        <div class="name">
-                            <div class="elipse">
-                                <img src="man.jpg" alt="man">
-                            </div>
-                            
-                        </div>
-                    </div>
+            <div class="testimonials__card">
+              <div class="testimonials__author">
+                <div class="testimonials__avatar">
+                  <img src="man.jpg" alt="man" />
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="faq">
-            <div class="faq__contain">
-                <div class="batch"></div>
+            <div class="testimonials__card">
+              <div class="testimonials__author">
+                <div class="testimonials__avatar">
+                  <img src="man.jpg" alt="man" />
+                </div>
+              </div>
             </div>
-            <div class="ask"></div>
+          </div>
         </div>
-        <div class="cta">
-            <div class="contain-cta">
-                <div class="batch"></div>
-                <button class="register"></button>
-            </div>
+      </section>
+
+      <section class="faq">
+        <div class="faq__header">
+          <div class="faq__badge"></div>
         </div>
+        <div class="faq__list"></div>
+      </section>
+
+      <section class="cta">
+        <div class="cta__container">
+          <div class="cta__badge"></div>
+          <button class="cta__btn"></button>
+        </div>
+      </section>
     </main>
-    <footer>
-        <div class="conatin-footer">
-            <div class="left">
-                <div class="logo">
-                    <img src="logo.png" alt="logo">
-                </div>
-                <div class="quick-links">
 
-                </div>
-                <div class="help">
-                    
-                </div>
-                <div class="social-media">
-                    
-                </div>
-            </div>
-            <div class="right">
-                <div class="field">
-
-                </div>
-            </div>
-            <div class="bottom">
-                © 2025. All rights reserved.
-            </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <img src="logo.png" alt="logo" />
+          </div>
+          <div class="footer__links"></div>
+          <div class="footer__help"></div>
+          <div class="footer__social"></div>
         </div>
+        <div class="footer__newsletter">
+          <div class="footer__field"></div>
+        </div>
+        <div class="footer__bottom">© 2025. All rights reserved.</div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

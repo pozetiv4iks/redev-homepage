@@ -1,0 +1,58 @@
+@use 'variables' as *;
+
+@mixin title-1 {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+@mixin title-2 {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: capitalize;
+}
+
+@mixin subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+
+@mixin button-text {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+@mixin text-1 {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+@mixin text-2 {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+@mixin caption {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0;
+}
