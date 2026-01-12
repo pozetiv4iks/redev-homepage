@@ -81,7 +81,7 @@ body {
         @media (min-width: $breakpoint-md) {
             display: block;
             padding: 12px 24px;
-            background: $gradient;
+            background: $color-green;
             border: none;
             border-radius: 8px;
             color: $color-black;
@@ -133,6 +133,7 @@ body {
 .hero {
     width:100%;
     padding: 0 20px;
+    display: flex;
     @media (min-width: $breakpoint-md) {
     }
 
@@ -220,7 +221,8 @@ body {
         @include text-1;
         color: $color-gray1;
         text-align: center;
-
+        max-width: 330px;
+        text-align-last: center;
         @media (min-width: $breakpoint-md) {
         }
     }
@@ -236,7 +238,7 @@ body {
 
     &__btn {
         @include button-text;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         gap: 6px;
@@ -267,6 +269,11 @@ body {
                 border-color: $color-white;
             }
         }
+
+        &-icon {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     &__right {
@@ -292,14 +299,40 @@ body {
 }
 
 .brands {
+    background-color: $color-gray4;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 32px;
+
+
+
     @media (min-width: $breakpoint-md) {
     }
 
     @media (min-width: $breakpoint-xl) {
     }
 
-    &__container {
+    &__title {
+        @include text-1;
+        color: $color-gray1;
         @media (min-width: $breakpoint-md) {
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+
+        @media (min-width: $breakpoint-md) {
+            justify-content: space-between;
         }
 
         @media (min-width: $breakpoint-xl) {
@@ -307,12 +340,39 @@ body {
     }
 
     &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 calc(33.333% - 16px);
+
+        @media (min-width: $breakpoint-md) {
+            flex: 1;
+        }
+    }
+
+    &__image {
+        height: 24px;
+        width: auto;
+        object-fit: contain;
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+
         @media (min-width: $breakpoint-md) {
         }
     }
 }
 
 .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 20px;
+
     @media (min-width: $breakpoint-md) {
     }
 
@@ -325,16 +385,45 @@ body {
     }
 
     &__badge {
-        display: inline-flex;
+        @include text-2;
         align-items: center;
         gap: 8px;
         padding: 10px 12px;
         border-radius: 24px;
         border: 1px solid $color-gray2;
+        color: $color-green;
+    }
+
+    &__title {
+        @include title-2;
+        width: 100%;
+        color: $color-white;
+        text-align: center;
+
+        @media (min-width: $breakpoint-md) {
+        }
+    }
+
+    &__text {
+        @include text-1;
+        width: 100%;
+        max-width: 330px;
+        color: $color-gray1;
+        text-align: justify;
+        text-align-last: center;
+
+        @media (min-width: $breakpoint-md) {
+        }
     }
 
     &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+
         @media (min-width: $breakpoint-md) {
+            flex-direction: row;
         }
 
         @media (min-width: $breakpoint-xl) {
@@ -342,6 +431,15 @@ body {
     }
 
     &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        padding: 30px 24px;
+        border-radius: 12px;
+        border: 1px solid $color-gray2;
+        background: rgba(255, 255, 255, 0.04);
+
         @media (min-width: $breakpoint-md) {
         }
 
@@ -353,6 +451,24 @@ body {
         width: 48px;
         height: 48px;
         object-fit: contain;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__content-title {
+        @include text-1;
+        color: $color-white;
+        font-weight: 500;
+    }
+
+    &__content-text {
+        @include text-2;
+        color: $color-gray1;
+        line-height: 1.4;
     }
 }
 
