@@ -600,7 +600,7 @@ body {
 }
 .advantages__image {
   width: 100%;
-  max-width: 402px;
+  max-width: 560px;
 }
 .advantages__image img {
   width: 100%;
@@ -786,13 +786,11 @@ body {
   max-width: 343px;
   padding: 32px;
   border-radius: 16px;
-  border: 1px solid #4D4D4D;
-  background: rgba(255, 255, 255, 0.03);
+  background: #0F0F0F;
   -webkit-backdrop-filter: blur(9.18px);
           backdrop-filter: blur(9.18px);
-  -o-border-image: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
-     border-image: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
   align-items: flex-start;
+  border: 1px solid linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
   text-align: left;
 }
 .testimonials__quote {
@@ -1148,7 +1146,7 @@ body {
 .footer__left {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 50px;
   justify-items: center;
   text-align: center;

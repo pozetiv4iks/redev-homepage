@@ -606,7 +606,7 @@ body {
 
     &__image {
         width: 100%;
-        max-width: 402px;
+        max-width: 560px;
 
         img {
             width: 100%;
@@ -742,7 +742,6 @@ body {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 16px;
         width: 100%;
-
         @media (min-width: $breakpoint-md) {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -760,11 +759,10 @@ body {
         max-width: 343px;
         padding: 32px;
         border-radius: 16px;
-        border: 1px solid $color-gray2;
-        background: rgba(255, 255, 255, 0.03);
+        background: $color-gray4;
         backdrop-filter: blur(9.18px);
-        border-image: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
         align-items: flex-start;
+        border: 1px solid linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
         text-align: left;
     }
 
@@ -1057,7 +1055,7 @@ body {
     &__left {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 50px;
         justify-items: center;
         text-align: center;
