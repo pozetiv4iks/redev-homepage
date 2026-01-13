@@ -1,5 +1,6 @@
 @use 'variables' as *;
 
+// Mobile styles
 @mixin title-1 {
     font-family: $font-primary;
     font-weight: 500;
@@ -55,4 +56,95 @@
     font-size: 12px;
     line-height: 1;
     letter-spacing: 0;
+}
+
+// Large (Desktop) styles
+@mixin title-1-lg {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    text-transform: capitalize;
+}
+
+@mixin title-2-lg {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: capitalize;
+}
+
+@mixin title-3-lg {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+@mixin subtitle-lg {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0;
+}
+
+@mixin button-text-lg {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+@mixin text-1-lg {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+@mixin text-2-lg {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+@mixin caption-lg {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+@mixin badge {
+    @include text-2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 17px;
+    border-radius: 24px;
+    border: 1px solid $color-gray2;
+    color: $color-green;
+}
+
+@mixin card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    width: 100%;
+    padding: 30px 24px;
+    border-radius: 12px;
+    border: 1px solid $color-gray2;
+    background: rgba(255, 255, 255, 0.04);
 }

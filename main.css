@@ -145,14 +145,19 @@ body {
   gap: 32px;
 }
 .hero__badge {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
+  padding: 10px 17px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
-  width: 137px;
-  height: 37px;
+  color: #9DFF3A;
+  padding: 10px 12px;
 }
 .hero__badge-dot {
   width: 8px;
@@ -307,9 +312,10 @@ body {
   font-size: 14px;
   line-height: 1;
   letter-spacing: 0;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
+  padding: 10px 17px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
@@ -352,6 +358,8 @@ body {
 .features__card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 24px;
   width: 100%;
   padding: 30px 24px;
@@ -371,10 +379,10 @@ body {
   gap: 12px;
 }
 .features__content-title {
-  font-family: "Alexandria", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1;
+  font-size: 20px;
+  line-height: 1.4;
   letter-spacing: 0;
   color: #E5E5E5;
   font-weight: 500;
@@ -382,28 +390,214 @@ body {
 .features__content-text {
   font-family: "Alexandria", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
   color: #999999;
   line-height: 1.4;
 }
 
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 32px;
+  background: #0F0F0F;
+}
+@media (min-width: 768px) {
+  .stats {
+    padding: 60px 20px;
+  }
+}
+.stats__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 760px;
+}
+.stats__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  width: 100%;
+}
 .stats__badge {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
+  padding: 10px 17px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
+  color: #9DFF3A;
+}
+.stats__title {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  width: 100%;
+  color: #E5E5E5;
+}
+@media (min-width: 1440px) {
+  .stats__title {
+    font-family: "Alexandria", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: capitalize;
+  }
+}
+.stats__text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  width: 100%;
+  color: #999999;
+  text-align: justify;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  max-width: 640px;
+}
+.stats__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  width: 100%;
+  justify-items: center;
+}
+.stats__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 343px;
+  padding: 24px 20px;
+  align-items: center;
+  text-align: center;
+}
+.stats__card-title {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: #9DFF3A;
+}
+.stats__card-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #999999;
+  line-height: 1.4;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 20px;
+}
+@media (min-width: 768px) {
+  .advantages {
+    padding: 60px 20px;
+    gap: 40px;
+  }
+}
+.advantages__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 720px;
 }
 .advantages__badge {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
+  padding: 10px 17px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
+  color: #9DFF3A;
+}
+.advantages__title {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  width: 100%;
+  color: #E5E5E5;
+}
+@media (min-width: 1440px) {
+  .advantages__title {
+    font-family: "Alexandria", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: capitalize;
+  }
+}
+.advantages__text {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  width: 100%;
+  color: #999999;
+  text-align: justify;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  max-width: 700px;
+}
+.advantages__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .advantages__container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+.advantages__image {
+  width: 100%;
+  max-width: 402px;
 }
 .advantages__image img {
   width: 100%;
@@ -411,59 +605,388 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.advantages__icon {
-  width: 48px;
-  height: 48px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.testimonials__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 12px;
-  border-radius: 24px;
-  border: 1px solid #4D4D4D;
-}
-.testimonials__overlay--left {
-  width: 100%;
-  max-width: 100px;
-  height: 100%;
-  background-color: #4D4D4D;
-}
-.testimonials__overlay--right {
-  width: 100%;
-  max-width: 100px;
-  height: 100%;
-  background-color: #4D4D4D;
-}
-.testimonials__author {
+.advantages__list {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+}
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+  width: 100%;
+  padding: 30px 24px;
+  border-radius: 12px;
+  border: 1px solid #4D4D4D;
+  background: rgba(255, 255, 255, 0.04);
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+  gap: 24px;
+  padding: 24px 20px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  -o-border-image: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
+     border-image: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
+}
+.advantages__icon {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 0;
+  align-self: flex-start;
+}
+.advantages__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  text-align: left;
+}
+.advantages__text-title {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: #E5E5E5;
+  font-weight: 500;
+  text-align: left;
+}
+.advantages__text-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #999999;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px 20px;
+  background: #0F0F0F;
+}
+@media (min-width: 768px) {
+  .testimonials {
+    padding: 60px 20px;
+  }
+}
+.testimonials__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.testimonials__badge {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 17px;
+  border-radius: 24px;
+  border: 1px solid #4D4D4D;
+  color: #9DFF3A;
+}
+.testimonials__title {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  width: 100%;
+  color: #E5E5E5;
+  text-align: center;
+}
+@media (min-width: 1440px) {
+  .testimonials__title {
+    font-family: "Alexandria", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: capitalize;
+  }
+}
+.testimonials__text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #999999;
+}
+.testimonials__slider {
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+}
+.testimonials__overlay--left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(90deg, #0F0F0F 0%, transparent 100%);
+  pointer-events: none;
+}
+.testimonials__overlay--right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(270deg, #0F0F0F 0%, transparent 100%);
+  pointer-events: none;
+}
+.testimonials__cards {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .testimonials__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1440px) {
+  .testimonials__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.testimonials__card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 343px;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #4D4D4D;
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(9.18px);
+          backdrop-filter: blur(9.18px);
+  -o-border-image: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
+     border-image: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
+  align-items: flex-start;
+  text-align: left;
+}
+.testimonials__quote {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #E5E5E5;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
+.testimonials__author {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+}
+.testimonials__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #D0CFDE;
 }
 .testimonials__avatar img {
   width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testimonials__fullname {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  align-items: flex-start;
+}
+.testimonials__name {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #E5E5E5;
+  font-weight: 600;
+}
+.testimonials__position {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #999999;
 }
 
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 20px 60px;
+}
+@media (min-width: 768px) {
+  .faq {
+    padding: 60px 20px 80px;
+  }
+}
+.faq__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 640px;
+}
 .faq__badge {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
+  padding: 10px 17px;
   border-radius: 24px;
+  border: 1px solid #4D4D4D;
+  color: #9DFF3A;
+}
+.faq__title {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  width: 100%;
+  color: #E5E5E5;
+}
+@media (min-width: 1440px) {
+  .faq__title {
+    font-family: "Alexandria", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: capitalize;
+  }
+}
+.faq__text {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  width: 100%;
+  max-width: 640px;
+  color: #999999;
+  text-align: justify;
+  -moz-text-align-last: center;
+       text-align-last: center;
+}
+.faq__list {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq__item {
+  width: 100%;
+  border: 1px solid #4D4D4D;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  justify-content: space-between;
+  opacity: 1;
   border: 1px solid #4D4D4D;
 }
+.faq__item summary {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: #E5E5E5;
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+.faq__item summary::after {
+  content: "+";
+  font-size: 24px;
+  color: #E5E5E5;
+  transition: transform 0.2s ease;
+}
+.faq__item[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq__item__answer {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #999999;
+  padding: 18px 16px;
+  line-height: 1.6;
+}
+
+.cta {
+  background: #0F0F0F;
+}
 .cta__badge {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
+  padding: 10px 17px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
+  color: #9DFF3A;
 }
 .footer__logo img {
   width: 100%;

@@ -181,14 +181,9 @@ body {
     }
 
     &__badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
+        @include badge;
         padding: 10px 12px;
-        border-radius: 24px;
-        border: 1px solid $color-gray2;
-        width: 137px;
-        height: 37px;
+
         @media (min-width: $breakpoint-md) {
         }
     }
@@ -385,13 +380,8 @@ body {
     }
 
     &__badge {
-        @include text-2;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 12px;
-        border-radius: 24px;
-        border: 1px solid $color-gray2;
-        color: $color-green;
+        @include badge;
+
     }
 
     &__title {
@@ -431,14 +421,7 @@ body {
     }
 
     &__card {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        width: 100%;
-        padding: 30px 24px;
-        border-radius: 12px;
-        border: 1px solid $color-gray2;
-        background: rgba(255, 255, 255, 0.04);
+        @include card-box;
 
         @media (min-width: $breakpoint-md) {
         }
@@ -460,95 +443,169 @@ body {
     }
 
     &__content-title {
-        @include text-1;
+        @include subtitle;
         color: $color-white;
         font-weight: 500;
     }
 
     &__content-text {
-        @include text-2;
+        @include text-1;
         color: $color-gray1;
         line-height: 1.4;
     }
 }
 
 .stats {
-    @media (min-width: $breakpoint-md) {
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 32px;
+    background: $color-gray4;
 
-    @media (min-width: $breakpoint-xl) {
+    @media (min-width: $breakpoint-md) {
+        padding: 60px 20px;
     }
 
     &__container {
-        @media (min-width: $breakpoint-md) {
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 760px;
     }
 
     &__header {
-        @media (min-width: $breakpoint-md) {
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+        width: 100%;
     }
 
     &__badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 12px;
-        border-radius: 24px;
-        border: 1px solid $color-gray2;
+        @include badge;
+    }
+
+    &__title {
+        @include title-2;
+        width: 100%;
+        color: $color-white;
+
+        @media (min-width: $breakpoint-xl) {
+            @include title-2-lg;
+        }
+    }
+
+    &__text {
+        @include subtitle;
+        width: 100%;
+        color: $color-gray1;
+        text-align: justify;
+        text-align-last: center;
+        max-width: 640px;
     }
 
     &__row {
-        @media (min-width: $breakpoint-md) {
-        }
-
-        @media (min-width: $breakpoint-xl) {
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 12px;
+        width: 100%;
+        justify-items: center;
     }
 
     &__card {
-        @media (min-width: $breakpoint-md) {
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        max-width: 343px;
+        padding: 24px 20px;
+        align-items: center;
+        text-align: center;
+    }
 
-        @media (min-width: $breakpoint-xl) {
-        }
+    &__card-title {
+        @include title-2-lg;
+        color: $color-green;
+    }
+
+    &__card-text {
+        @include subtitle;
+        color: $color-gray1;
+        line-height: 1.4;
     }
 }
 
 .advantages {
-    @media (min-width: $breakpoint-md) {
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 40px 20px;
 
-    @media (min-width: $breakpoint-xl) {
+    @media (min-width: $breakpoint-md) {
+        padding: 60px 20px;
+        gap: 40px;
     }
 
     &__header {
-        @media (min-width: $breakpoint-md) {
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        width: 100%;
+        max-width: 720px;
     }
 
     &__badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 12px;
-        border-radius: 24px;
-        border: 1px solid $color-gray2;
+        @include badge;
+    }
+
+    &__title {
+        @include title-2;
+        width: 100%;
+        color: $color-white;
+
+        @media (min-width: $breakpoint-xl) {
+            @include title-2-lg;
+        }
+    }
+
+    &__text {
+        @include text-1;
+        width: 100%;
+        color: $color-gray1;
+        text-align: justify;
+        text-align-last: center;
+        max-width: 700px;
     }
 
     &__container {
-        @media (min-width: $breakpoint-md) {
-        }
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
 
-        @media (min-width: $breakpoint-xl) {
+        @media (min-width: $breakpoint-md) {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 32px;
         }
     }
 
     &__image {
-        @media (min-width: $breakpoint-md) {
-        }
+        width: 100%;
+        max-width: 402px;
 
-        img {   
+        img {
             width: 100%;
             height: auto;
             object-fit: contain;
@@ -556,134 +613,309 @@ body {
     }
 
     &__list {
-        @media (min-width: $breakpoint-md) {
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
     }
 
     &__item {
-        @media (min-width: $breakpoint-md) {
-        }
+        @include card-box;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+        gap: 24px;
+        padding: 24px 20px;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        border-image: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
     }
 
     &__icon {   
-        width: 48px;
-        height: 48px;
+        width: 30px;
+        height: 30px;
         object-fit: contain;
+        flex-shrink: 0;
+        margin-top: 0;
+        align-self: flex-start;
     }
 
     &__text {
-        @media (min-width: $breakpoint-md) {
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    &__text-title {
+        @include title-2;
+        color: $color-white;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    &__text-text {
+        @include subtitle;
+        color: $color-gray1;
+        line-height: 1.5;
+        text-align: left;
     }
 }
 
 .testimonials {
-    @media (min-width: $breakpoint-md) {
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 20px;
+    background: $color-gray4;
 
-    @media (min-width: $breakpoint-xl) {
+    @media (min-width: $breakpoint-md) {
+        padding: 60px 20px;
     }
 
     &__header {
-        @media (min-width: $breakpoint-md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    &__badge {
+        @include badge;
+    }
+
+    &__title {
+        @include title-2;
+        width: 100%;
+        color: $color-white;
+        text-align: center;
+
+        @media (min-width: $breakpoint-xl) {
+            @include title-2-lg;
         }
     }
 
-    &__badge {  
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 12px;
-        border-radius: 24px;
-        border: 1px solid $color-gray2;
+    &__text {
+        @include subtitle;
+        color: $color-gray1;
     }
 
     &__slider {
-        @media (min-width: $breakpoint-md) {
-        }
+        width: 100%;
+        position: relative;
+        padding: 20px 0;
     }
 
     &__overlay {
         &--left {   
-            width: 100%;
-            max-width: 100px;
-            height: 100%;
-            background-color: $color-gray2;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            background: linear-gradient(90deg, $color-gray4 0%, transparent 100%);
+            pointer-events: none;
         }
 
         &--right {  
-            width: 100%;
-            max-width: 100px;
-            height: 100%;
-            background-color: $color-gray2;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            background: linear-gradient(270deg, $color-gray4 0%, transparent 100%);
+            pointer-events: none;
         }
     }
 
     &__cards {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 16px;
+        width: 100%;
+
         @media (min-width: $breakpoint-md) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         @media (min-width: $breakpoint-xl) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
     }
 
     &__card {
-        @media (min-width: $breakpoint-md) {
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        max-width: 343px;
+        padding: 32px;
+        border-radius: 16px;
+        border: 1px solid $color-gray2;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(9.18px);
+        border-image: linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) 1;
+        align-items: flex-start;
+        text-align: left;
+    }
 
-        @media (min-width: $breakpoint-xl) {
-        }
+    &__quote {
+        @include text-1;
+        color: $color-white;
+        line-height: 1.5;
+        text-align: left;
+        width: 100%;
     }
 
     &__author { 
         display: flex;
-        flex-direction: column;
-        gap: 16px;
+        align-items: center;
+        gap: 17px;
+        width: 100%;
     }
 
     &__avatar {
-        @media (min-width: $breakpoint-md) {
-        }
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: #D0CFDE;
 
         img {   
             width: 100%;
-            height: auto;
-            object-fit: contain;
+            height: 100%;
+            object-fit: cover;
         }
+    }
+
+    &__fullname {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    &__name {
+        @include text-2;
+        color: $color-white;
+        font-weight: 600;
+    }
+
+    &__position {
+        @include caption;
+        color: $color-gray1;
     }
 }
 
 .faq {
-    @media (min-width: $breakpoint-md) {
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 20px 60px;
 
-    @media (min-width: $breakpoint-xl) {
+    @media (min-width: $breakpoint-md) {
+        padding: 60px 20px 80px;
     }
 
     &__header {
-        @media (min-width: $breakpoint-md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        width: 100%;
+        max-width: 640px;
+    }
+
+    &__badge {
+        @include badge;
+    }
+
+    &__title {
+        @include title-2;
+        width: 100%;
+        color: $color-white;
+
+        @media (min-width: $breakpoint-xl) {
+            @include title-2-lg;
         }
     }
 
-    &__badge { 
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 12px;
-        border-radius: 24px;
-        border: 1px solid $color-gray2;
+    &__text {
+        @include text-1;
+        width: 100%;
+        max-width: 640px;
+        color: $color-gray1;
+        text-align: justify;
+        text-align-last: center;
     }
 
     &__list {
-        @media (min-width: $breakpoint-md) {
+        width: 100%;
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__item {
+        width: 100%;
+        border: 1px solid $color-gray2;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.02);
+        overflow: hidden;
+        justify-content: space-between;
+        opacity: 1;
+        border: 1px solid $color-gray2;
+
+        summary {
+            @include text-1;
+            font-weight: 500;
+            color: $color-white;
+            padding: 18px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            cursor: pointer;
+            list-style: none;
         }
 
-        @media (min-width: $breakpoint-xl) {
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 24px;
+            color: $color-white;
+            transition: transform 0.2s ease;
+        }
+
+        &[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        &__answer {
+            @include text-2;
+            color: $color-gray1;
+            padding: 18px 16px;
+            line-height: 1.6;
         }
     }
 }
 
 .cta {
+    background: $color-gray4;
+
     @media (min-width: $breakpoint-md) {
     }
 
@@ -698,13 +930,8 @@ body {
         }
     }
 
-    &__badge { 
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 12px;
-        border-radius: 24px;
-        border: 1px solid $color-gray2;
+    &__badge {
+        @include badge;
     }
 
     &__btn {
