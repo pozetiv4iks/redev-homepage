@@ -193,6 +193,7 @@ body {
   max-width: 330px;
   -moz-text-align-last: center;
        text-align-last: center;
+  line-height: 20px;
 }
 .hero__buttons {
   display: flex;
@@ -338,11 +339,12 @@ body {
   line-height: 1;
   letter-spacing: 0;
   width: 100%;
-  max-width: 330px;
   color: #999999;
   text-align: justify;
   -moz-text-align-last: center;
        text-align-last: center;
+  line-height: 20px;
+  max-width: 330px;
 }
 .features__row {
   display: flex;
@@ -462,10 +464,10 @@ body {
   }
 }
 .stats__text {
-  font-family: "Inter", sans-serif;
+  font-family: "Alexandria", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1;
   letter-spacing: 0;
   width: 100%;
   color: #999999;
@@ -473,6 +475,8 @@ body {
   -moz-text-align-last: center;
        text-align-last: center;
   max-width: 640px;
+  line-height: 20px;
+  max-width: 330px;
 }
 .stats__row {
   display: grid;
@@ -576,10 +580,9 @@ body {
   letter-spacing: 0;
   width: 100%;
   color: #999999;
-  text-align: justify;
-  -moz-text-align-last: center;
-       text-align-last: center;
-  max-width: 700px;
+  text-align: center;
+  max-width: 325px;
+  line-height: 20px;
 }
 .advantages__container {
   width: 100%;
@@ -646,8 +649,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 .advantages__text-title {
   font-family: "Alexandria", sans-serif;
@@ -658,7 +661,7 @@ body {
   text-transform: capitalize;
   color: #E5E5E5;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
 }
 .advantages__text-text {
   font-family: "Inter", sans-serif;
@@ -668,7 +671,7 @@ body {
   letter-spacing: 0;
   color: #999999;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
 }
 
 .testimonials {
@@ -729,12 +732,17 @@ body {
   }
 }
 .testimonials__text {
-  font-family: "Inter", sans-serif;
+  font-family: "Alexandria", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1;
   letter-spacing: 0;
   color: #999999;
+  text-align: center;
+  align-self: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  line-height: 20px;
 }
 .testimonials__slider {
   width: 100%;
@@ -909,11 +917,13 @@ body {
   line-height: 1;
   letter-spacing: 0;
   width: 100%;
-  max-width: 640px;
+  max-width: 320px;
   color: #999999;
-  text-align: justify;
+  text-align: center;
+  align-self: center;
   -moz-text-align-last: center;
        text-align-last: center;
+  line-height: 20px;
 }
 .faq__list {
   width: 100%;
@@ -973,6 +983,24 @@ body {
 
 .cta {
   background: #0F0F0F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .cta {
+    padding: 60px 20px;
+  }
+}
+.cta__container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 .cta__badge {
   font-family: "Alexandria", sans-serif;
@@ -988,9 +1016,84 @@ body {
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
 }
-.footer__logo img {
+.cta__title {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
   width: 100%;
-  height: auto;
+  text-align: center;
+  color: #E5E5E5;
+}
+@media (min-width: 1440px) {
+  .cta__title {
+    font-family: "Alexandria", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: capitalize;
+  }
+}
+.cta__text {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  width: 100%;
+  max-width: 320px;
+  color: #999999;
+  text-align: center;
+  align-self: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  line-height: 20px;
+}
+.cta__btn {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 24px;
+  border: none;
+  color: #000000;
+  background-color: #9DFF3A;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.cta__btn:hover {
+  opacity: 0.9;
+  border-color: #E5E5E5;
+}
+
+.footer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+  gap: 20px;
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer__logo img {
+  width: 32px;
+  height: 32px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.footer__logo span {
+  font-weight: 600;
+  font-size: 18px;
+  color: #E5E5E5;
 }/*# sourceMappingURL=main.css.map */
