@@ -1221,18 +1221,23 @@ body {
         display: flex;
         gap: 20px;
         flex-direction: column;
+        align-items: start;
         width: 100%;
         max-width: 400px;
         margin-top: 30px;
 
         @media (min-width: $breakpoint-md) {
             margin-top: 0;
+            min-width: 385px;
         }
     }
 
     &__subtitle {
         @include subtitle;
         text-align: left;
+        @media (min-width: $breakpoint-md) {
+            max-width: 198px;
+        }
     }
 
     &__line {
@@ -1256,4 +1261,64 @@ body {
             padding: 40px 0;
         }
     }
+    &__field {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+}
+
+&__input {
+    width: 100%;
+    padding: 16px 56px 16px 0px;
+    background: transparent;
+    color: $color-white;
+    font-family: $font-primary;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: none;
+
+    &::placeholder {
+        color: $color-gray1;
+        opacity: 0.7;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $color-green;
+        background: rgba($color-gray4, 0.3);
+    }
+
+    &:hover {
+        border-color: $color-gray1;
+        background: rgba($color-gray4, 0.1);
+    }
+}
+
+&__submit {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: $color-green;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: lighten($color-green, 5%);
+        transform: translateY(-50%) rotate(360deg);
+    }
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+}
 }
