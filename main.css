@@ -67,26 +67,45 @@ body {
 .header__nav a:hover {
   color: #E5E5E5;
 }
-.header__btn {
+.header__buttons {
+  font-family: "Alexandria", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
   display: none;
 }
 @media (min-width: 768px) {
-  .header__btn {
-    display: block;
-    padding: 12px 24px;
-    background: #9DFF3A;
-    border: none;
-    border-radius: 8px;
-    color: #000000;
-    font-family: "Alexandria", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
+  .header__buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
-  .header__btn:hover {
-    opacity: 0.9;
-  }
+}
+.header__btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Alexandria", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header__btn--login {
+  background: transparent;
+  color: #E5E5E5;
+}
+.header__btn--login:hover {
+  border-color: #E5E5E5;
+  background: rgba(255, 255, 255, 0.05);
+}
+.header__btn--primary {
+  background: #9DFF3A;
+  color: #000000;
+}
+.header__btn--primary:hover {
+  opacity: 0.9;
 }
 .header__burger {
   display: flex;
@@ -856,13 +875,7 @@ body {
 }
 @media (min-width: 768px) {
   .testimonials {
-    padding: 60px 40px;
-    gap: 32px;
-  }
-}
-@media (min-width: 1440px) {
-  .testimonials {
-    padding: 80px 80px;
+    padding: 60px 20px;
   }
 }
 .testimonials__header {
@@ -918,21 +931,16 @@ body {
   letter-spacing: 0;
   color: #999999;
   text-align: center;
-  max-width: 330px;
+  align-self: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
   line-height: 20px;
-}
-@media (min-width: 768px) {
-  .testimonials__text {
-    max-width: 500px;
-    line-height: 24px;
-  }
 }
 .testimonials__slider {
   width: 100%;
   position: relative;
   padding: 20px 0;
   overflow: hidden;
-  display: flex;
   justify-content: center;
 }
 .testimonials__overlay--left {
@@ -974,10 +982,16 @@ body {
   border: 1px solid transparent;
   text-align: left;
 }
+.testimonials__card:nth-child(n+4) {
+  display: none;
+}
 @media (min-width: 768px) {
   .testimonials__card {
     max-width: 373px;
     max-height: 204px;
+  }
+  .testimonials__card:nth-child(n+4) {
+    display: flex;
   }
 }
 .testimonials__quote {

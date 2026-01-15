@@ -20,7 +20,10 @@
           <li><a href="#">FAQ</a></li>
         </ul>
       </nav>
-      <button class="header__btn">Try For Free</button>
+       <div class="header__buttons"> 
+        <button class="header__btn header__btn--login">Log in</button>
+        <button class="header__btn header__btn--primary">Try For Free</button>
+      </div>
       <button class="header__burger" type="button" aria-label="Menu">
         <span></span>
         <span></span>
@@ -327,11 +330,16 @@
           </div>
         </div>
         <div class="footer__right">
-          <div class="footer__subtitle">
-            Join our mailing list for updates
-          </div>
-          <div class="footer__field"></div>
-          <span class="footer__line"></span>
+            <div class="footer__subtitle">
+                Join our mailing list for updates
+            </div>
+            <div class="footer__field">
+                <input type="email" class="footer__input" placeholder="Your email address">
+                <button type="submit" class="footer__submit">→</button>
+            </div>
+            <span class="footer__line"></span>
+        </div>
+            <span class="footer__line"></span>
         </div>
         <div class="footer__bottom">© 2025. All rights reserved.</div>
       </div>
