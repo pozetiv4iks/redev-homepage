@@ -1,168 +1,175 @@
-@use 'sass:color';
-@use 'variables' as *;
-@use 'mixins' as *;
+@import 'variables';
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: $font-primary;
+  font-family: $font-primary;
 }
 
 .newsletter {
-    background-image: url('image.jpg');
-    background-size: cover;
-    background-position: center;
+  background-image: url("image.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 123px 0;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: $color-bg-overlay;
+  }
+  
+  @media (max-width: map-get($breakpoints, md)) {
+    padding: 72px 0;
+  }
+  
+  @media (max-width: map-get($breakpoints, sm)) {
+    min-height: 350px;
+    padding: 32px $spacing-md;
+  }
+  
+  &__content {
     position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: $color-bg-overlay;
+    z-index: 1;
+    gap: $spacing-lg;
+    max-width: 1029px;
+    padding: 0 35px;
+    margin: 0 auto;
+    
+    @media (max-width: map-get($breakpoints, md)) {
+      gap: 20px;
     }
-
-    @include respond-to(md) {
-        min-height: 400px;
-        padding: 40px 20px;
+  }
+  
+  &__text {
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__title {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    color: $color-white;
+    margin-bottom: $spacing-sm;
+    
+    @media (max-width: map-get($breakpoints, lg)) {
+      font-size: $font-size-h1 + 8;
     }
-
-    @include respond-to(sm) {
-        min-height: 350px;
-        padding: 32px $spacing-md;
+    
+    @media (max-width: map-get($breakpoints, md)) {
+      line-height: 36px;
+      font-size: 30px;
     }
-
-    &__content {
-        position: relative;
-        z-index: 1;
-        @include flex-column-center;
-        gap: $spacing-lg;
-        max-width: 959px;
-        width: 100%;
-
-        @include respond-to(md) {
-            gap: 20px;
-        }
+    
+    @media (max-width: map-get($breakpoints, sm)) {
+      font-size: 28px;
     }
-
-    &__text {
-        @include flex-column-center;
-        gap: $spacing-sm;
-        width: 100%;
+  }
+  
+  &__subtitle {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: $color-white;
+    max-width: 674px;
+    margin: 0 auto;
+    
+    @media (max-width: map-get($breakpoints, lg)) {
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 300px;
     }
-
-    &__title {
-        @include text-h1;
-        color: $color-text-light;
-        max-width: 959px;
-
-        @include respond-to(xl) {
-            font-size: 42px;
-        }
-
-        @include respond-to(lg) {
-            font-size: 36px;
-        }
-
-        @include respond-to(md) {
-            font-size: 32px;
-        }
-
-        @include respond-to(sm) {
-            font-size: 28px;
-        }
+    
+    @media (max-width: map-get($breakpoints, md)) {
+      font-size: 14px;
+      line-height: 16px;
+      width: 100%;
     }
-
-    &__subtitle {
-        @include text-h5;
-        color: $color-text-light;
-        max-width: 674px;
-
-        @include respond-to(lg) {
-            font-size: 18px;
-        }
-
-        @include respond-to(md) {
-            font-size: 16px;
-        }
-
-        @include respond-to(sm) {
-            font-size: 14px;
-        }
+    
+    @media (max-width: map-get($breakpoints, sm)) {
+      font-size: 14px;
     }
-
-    &__form {
-        display: flex;
-        gap: $spacing-xs;
-        max-width: 653px;
-        width: 100%;
-        height: 48px;
-
-        @include respond-to(md) {
-            flex-direction: column;
-            height: auto;
-            gap: 12px;
-        }
+  }
+  
+  &__form {
+    display: flex;
+    gap: $spacing-xs;
+    max-width: 653px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media (max-width: map-get($breakpoints, md)) {
+      flex-direction: column;
+      gap: 12px;
     }
-
-    &__input {
-        flex: 1;
-        max-width: 527px;
-        height: 48px;
-        padding: $spacing-md;
-        background: $color-white;
-        border: 1px solid $color-border;
-        border-radius: $radius-none;
-        font-family: $font-primary;
-        font-size: $font-size-body;
-        outline: none;
-
-        &::placeholder {
-            color: $color-placeholder;
-        }
-
-        &:focus {
-            border-color: $color-black;
-        }
-
-        @include respond-to(md) {
-            max-width: 100%;
-            border-radius: $radius-sm;
-        }
+  }
+  
+  &__input {
+    flex: 1;
+    padding: 12px;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-none;
+    font-family: $font-primary;
+    font-size: 14px;
+    line-height: 24px;
+    outline: none;
+    
+    &::placeholder {
+      color: $color-placeholder;
     }
-
-    &__button {
-        @include button-base;
-        min-width: 126px;
-        height: 48px;
-        padding: $spacing-sm $spacing-md;
-        background: $color-black;
-        color: $color-text-light;
-        font-family: $font-primary;
-        font-size: $font-size-body;
-        font-weight: 500;
-        line-height: 120%;
-        border: 1px solid $color-border;
-        border-radius: $radius-none;
-        box-shadow: 
-            0px 1px 2px 0px rgba(0, 0, 0, 0.12),
-            0px -1px 0px 0px rgba(0, 0, 0, 0.08) inset;
-
-        &:hover {
-            background: color.adjust($color-black, $lightness: 15%);
-        }
-
-        @include respond-to(md) {
-            width: 100%;
-            border-radius: $radius-sm;
-        }
+    
+    &:focus {
+      border-color: $color-black;
     }
-
-    &__button-icon {
-        width: 16px;
-        height: 16px;
+    
+    @media (max-width: 767px) {
+      max-width: 100%;
+      border-radius: $radius-sm;
+      font-size: 12px;
+      line-height: 16px;
     }
+  }
+  
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-width: 126px;
+    padding: $spacing-sm $spacing-md;
+    background: $color-black;
+    color: $color-white;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    border: 1px solid $color-border;
+    border-radius: $radius-none;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12), 0px -1px 0px 0px rgba(0, 0, 0, 0.08) inset;
+    text-transform: uppercase;
+    
+    &:hover {
+      background: rgb(39.25, 39.25, 39.25);
+    }
+    
+    @media (max-width: 767px) {
+      width: 100%;
+      border-radius: $radius-sm;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
 }
