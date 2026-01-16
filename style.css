@@ -7,22 +7,17 @@
 body {
   font-family: 'Inter', sans-serif;
   background: #1B2316;
-  min-height: 100vh;
 }
 
 .plants {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 329px 0 519px;
 }
 
 .container {
   width: 100%;
-  padding: 20px;
-  margin-left: auto;
-  aspect-ratio: 1 / 1;
+  padding: 0 15px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .plants__slider {
@@ -51,12 +46,8 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.15);
   border-radius: 92px;
   padding: 60px;
-  padding-left: 350px;
-  width: 100%;
-  max-width: 1600px;
-  height: 755px;
+  min-height: 755px;
   position: relative;
-  overflow: visible;
 }
 
 .plants__image {
