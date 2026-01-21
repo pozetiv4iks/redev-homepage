@@ -551,7 +551,6 @@ body {
 
     &__title {
         @include title-2;
-        width: 100%;
         color: $color-white;
 
         @media (min-width: $breakpoint-xl) {
@@ -560,12 +559,10 @@ body {
     }
 
     &__text {
-        @include text-1;
-        width: 100%;
+        font-family: $font-primary;
+        font-size: 14px;
         color: $color-gray1;
-        text-align: center;
-        max-width: 330px;
-        line-height: 20px;
+        line-height: 17px;
 
         @media (min-width: $breakpoint-md) {
             max-width: 500px;
@@ -582,24 +579,21 @@ body {
     }
 
     &__card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        width: 100%;
-        max-width: 343px;
-        padding: 24px 20px;
         text-align: center;
     }
 
     &__card-title {
-        @include title-2-lg;
-        color: $color-green;
+      font-family: $font-primary;
+      font-size: 48px;
+      line-height: 1;
+      text-transform: capitalize;
+      margin-bottom: 12px;
+      color: $color-green;
     }
 
     &__card-text {
-        @include subtitle;
+        font-family: $font-primary;
+        font-size: 20px;
         color: $color-gray1;
         line-height: 1.4;
     }

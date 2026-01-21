@@ -617,7 +617,6 @@ body {
   line-height: 1;
   letter-spacing: 0;
   text-transform: capitalize;
-  width: 100%;
   color: #E5E5E5;
 }
 @media (min-width: 1440px) {
@@ -632,15 +631,9 @@ body {
 }
 .stats__text {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1;
-  letter-spacing: 0;
-  width: 100%;
+  font-size: 14px;
   color: #999999;
-  text-align: center;
-  max-width: 330px;
-  line-height: 20px;
+  line-height: 17px;
 }
 @media (min-width: 768px) {
   .stats__text {
@@ -656,31 +649,19 @@ body {
   justify-items: center;
 }
 .stats__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: 100%;
-  max-width: 343px;
-  padding: 24px 20px;
   text-align: center;
 }
 .stats__card-title {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 48px;
   line-height: 1;
-  letter-spacing: 0;
   text-transform: capitalize;
+  margin-bottom: 12px;
   color: #9DFF3A;
 }
 .stats__card-text {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-family: "Alexandria", sans-serif;
   font-size: 20px;
-  line-height: 1.4;
-  letter-spacing: 0;
   color: #999999;
   line-height: 1.4;
 }
