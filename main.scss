@@ -605,12 +605,15 @@ body {
     }
 }
 
+.advantages__cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
 .advantages {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-    padding: 40px 20px;
+    padding: 40px 0;
 
     @media (min-width: $breakpoint-md) {
         padding: 60px 40px;
@@ -621,14 +624,13 @@ body {
         padding: 80px 80px;
     }
 
+
     &__header {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 16px;
         text-align: center;
-        width: 100%;
-        max-width: 720px;
     }
 
     &__badge {
@@ -637,7 +639,6 @@ body {
 
     &__title {
         @include title-2;
-        width: 100%;
         color: $color-white;
 
         @media (min-width: $breakpoint-xl) {
@@ -646,11 +647,10 @@ body {
     }
 
     &__text {
-        @include text-1;
-        width: 100%;
+        font-family: $font-primary;
+        font-size: 16px;
         color: $color-gray1;
         text-align: center;
-        max-width: 325px;
         line-height: 20px;
 
         @media (min-width: $breakpoint-md) {
@@ -660,7 +660,6 @@ body {
     }
 
     &__container {
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -687,18 +686,15 @@ body {
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        width: 100%;
-        max-width: 560px;
+        gap: 16px;
     }
 
     &__item {
-        @include card-box;
+        display: flex;
         flex-direction: row;
         align-items: flex-start;
-        text-align: left;
         gap: 24px;
-        padding: 24px;
+        padding: 24px 20px;
         border-radius: 20px;
         background: linear-gradient($color-gray4, $color-gray4) padding-box,
                     linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) border-box;
@@ -710,8 +706,6 @@ body {
         height: 30px;
         object-fit: contain;
         flex-shrink: 0;
-        margin-top: 0;
-        align-self: flex-start;
     }
 
     &__text {
@@ -721,16 +715,20 @@ body {
     }
 
     &__text-title {
-        @include title-2;
+        font-family: $font-primary;
         color: $color-white;
+        font-size: 20px;
         font-weight: 500;
+        line-height: 1.4;
         text-align: left;
+        text-transform: capitalize;
     }
 
     &__text-text {
-        @include text-2;
+        font-family: $font-primary;
+        font-size: 14px;
         color: $color-gray1;
-        line-height: 1.5;
+        line-height: 17px;
         text-align: left;
     }
 }
@@ -900,11 +898,7 @@ body {
     }
 }
 .faq {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 40px 20px 60px;
+    padding: 40px 0;
 
     @media (min-width: $breakpoint-md) {
         padding: 60px 40px 80px;
@@ -913,6 +907,12 @@ body {
 
     @media (min-width: $breakpoint-xl) {
         padding: 80px 80px 100px;
+    }
+    &__conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
     }
 
     &__header {

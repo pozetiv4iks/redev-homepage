@@ -126,11 +126,10 @@
 }
 
 @mixin badge {
-    @include text-2;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 17px;
+    font-family: $font-primary;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 11px 22px;
     border-radius: 24px;
     border: 1px solid $color-gray2;
     color: $color-green;

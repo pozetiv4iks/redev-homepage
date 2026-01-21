@@ -213,14 +213,9 @@ body {
 }
 .hero__badge {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 17px;
+  line-height: 17px;
+  padding: 11px 22px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
@@ -461,14 +456,9 @@ body {
 }
 .features__badge {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 17px;
+  line-height: 17px;
+  padding: 11px 22px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
@@ -613,14 +603,9 @@ body {
 }
 .stats__badge {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 17px;
+  line-height: 17px;
+  padding: 11px 22px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
@@ -700,12 +685,15 @@ body {
   line-height: 1.4;
 }
 
-.advantages {
+.advantages__cont {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  padding: 40px 20px;
+}
+
+.advantages {
+  padding: 40px 0;
 }
 @media (min-width: 768px) {
   .advantages {
@@ -724,19 +712,12 @@ body {
   align-items: center;
   gap: 16px;
   text-align: center;
-  width: 100%;
-  max-width: 720px;
 }
 .advantages__badge {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 17px;
+  line-height: 17px;
+  padding: 11px 22px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
@@ -748,7 +729,6 @@ body {
   line-height: 1;
   letter-spacing: 0;
   text-transform: capitalize;
-  width: 100%;
   color: #E5E5E5;
 }
 @media (min-width: 1440px) {
@@ -763,14 +743,9 @@ body {
 }
 .advantages__text {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 1;
-  letter-spacing: 0;
-  width: 100%;
   color: #999999;
   text-align: center;
-  max-width: 325px;
   line-height: 20px;
 }
 @media (min-width: 768px) {
@@ -780,7 +755,6 @@ body {
   }
 }
 .advantages__container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -806,26 +780,14 @@ body {
 .advantages__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 560px;
+  gap: 16px;
 }
 .advantages__item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 24px;
-  width: 100%;
-  padding: 30px 24px;
-  border-radius: 12px;
-  border: 1px solid #4D4D4D;
-  background: rgba(255, 255, 255, 0.04);
   flex-direction: row;
   align-items: flex-start;
-  text-align: left;
   gap: 24px;
-  padding: 24px;
+  padding: 24px 20px;
   border-radius: 20px;
   background: linear-gradient(#0F0F0F, #0F0F0F) padding-box, linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) border-box;
   border: 1px solid transparent;
@@ -836,8 +798,6 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
   flex-shrink: 0;
-  margin-top: 0;
-  align-self: flex-start;
 }
 .advantages__text {
   display: flex;
@@ -846,23 +806,18 @@ body {
 }
 .advantages__text-title {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 1;
-  letter-spacing: 0;
-  text-transform: capitalize;
   color: #E5E5E5;
+  font-size: 20px;
   font-weight: 500;
+  line-height: 1.4;
   text-align: left;
+  text-transform: capitalize;
 }
 .advantages__text-text {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0;
   color: #999999;
-  line-height: 1.5;
+  line-height: 17px;
   text-align: left;
 }
 
@@ -890,14 +845,9 @@ body {
 }
 .testimonials__badge {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 17px;
+  line-height: 17px;
+  padding: 11px 22px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
@@ -1050,11 +1000,7 @@ body {
 }
 
 .faq {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  padding: 40px 20px 60px;
+  padding: 40px 0;
 }
 @media (min-width: 768px) {
   .faq {
@@ -1067,6 +1013,12 @@ body {
     padding: 80px 80px 100px;
   }
 }
+.faq__conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
 .faq__header {
   display: flex;
   flex-direction: column;
@@ -1078,14 +1030,9 @@ body {
 }
 .faq__badge {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 17px;
+  line-height: 17px;
+  padding: 11px 22px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
@@ -1209,14 +1156,9 @@ body {
 }
 .cta__badge {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 17px;
+  line-height: 17px;
+  padding: 11px 22px;
   border-radius: 24px;
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
