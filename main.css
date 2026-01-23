@@ -42,11 +42,12 @@ body {
 }
 @media (max-width: 768px) {
   .newsletter__content {
-    gap: 20px;
+    gap: 24px;
   }
 }
 .newsletter__text {
   margin-bottom: 24px;
+  text-align: center;
 }
 .newsletter__title {
   font-family: "Inter", sans-serif;
@@ -54,7 +55,6 @@ body {
   font-style: italic;
   font-size: 60px;
   line-height: 1;
-  text-align: center;
   color: #FFFFFF;
   margin-bottom: 8px;
 }
@@ -79,16 +79,14 @@ body {
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
-  text-align: center;
   color: #FFFFFF;
-  max-width: 674px;
   margin: 0 auto;
 }
 @media (max-width: 1024px) {
   .newsletter__subtitle {
     font-size: 18px;
     line-height: 28px;
-    max-width: 300px;
+    max-width: 380px;
   }
 }
 @media (max-width: 768px) {
@@ -112,7 +110,6 @@ body {
 }
 @media (max-width: 768px) {
   .newsletter__form {
-    flex-direction: column;
     gap: 12px;
   }
 }
@@ -139,7 +136,6 @@ body {
 @media (max-width: 767px) {
   .newsletter__input {
     max-width: 100%;
-    border-radius: 8px;
     font-size: 12px;
     line-height: 16px;
   }
@@ -169,8 +165,6 @@ body {
 }
 @media (max-width: 767px) {
   .newsletter__button {
-    width: 100%;
-    border-radius: 8px;
     font-size: 14px;
     line-height: 16px;
   }

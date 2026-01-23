@@ -42,12 +42,13 @@ body {
     margin: 0 auto;
     
     @media (max-width: map-get($breakpoints, md)) {
-      gap: 20px;
+      gap: 24px;
     }
   }
   
   &__text {
     margin-bottom: $spacing-lg;
+    text-align: center;
   }
   
   &__title {
@@ -56,7 +57,6 @@ body {
     font-style: italic;
     font-size: 60px;
     line-height: 1;
-    text-align: center;
     color: $color-white;
     margin-bottom: $spacing-sm;
     
@@ -79,15 +79,13 @@ body {
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
-    text-align: center;
     color: $color-white;
-    max-width: 674px;
     margin: 0 auto;
     
     @media (max-width: map-get($breakpoints, lg)) {
       font-size: 18px;
       line-height: 28px;
-      max-width: 300px;
+      max-width: 380px;
     }
     
     @media (max-width: map-get($breakpoints, md)) {
@@ -109,7 +107,6 @@ body {
     margin: 0 auto;
     
     @media (max-width: map-get($breakpoints, md)) {
-      flex-direction: column;
       gap: 12px;
     }
   }
@@ -135,7 +132,6 @@ body {
     
     @media (max-width: 767px) {
       max-width: 100%;
-      border-radius: $radius-sm;
       font-size: 12px;
       line-height: 16px;
     }
@@ -166,8 +162,6 @@ body {
     }
     
     @media (max-width: 767px) {
-      width: 100%;
-      border-radius: $radius-sm;
       font-size: 14px;
       line-height: 16px;
     }
