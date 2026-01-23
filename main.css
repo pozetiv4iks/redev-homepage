@@ -656,7 +656,7 @@ body {
     padding: 80px 80px;
   }
 }
-.advantages__section {
+.advantages__container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -711,14 +711,14 @@ body {
     line-height: 24px;
   }
 }
-.advantages__container {
+.advantages__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
 }
 @media (min-width: 768px) {
-  .advantages__container {
+  .advantages__content {
     flex-direction: row;
     align-items: flex-start;
     gap: 48px;
@@ -728,7 +728,7 @@ body {
   width: 100%;
   max-width: 560px;
 }
-.advantages__image img {
+.advantages__shape {
   width: 100%;
   height: auto;
   -o-object-fit: contain;
@@ -739,7 +739,8 @@ body {
   flex-direction: column;
   gap: 16px;
 }
-.advantages__item {
+
+.advantage {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -749,19 +750,19 @@ body {
   background: linear-gradient(#0F0F0F, #0F0F0F) padding-box, linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) border-box;
   border: 1px solid transparent;
 }
-.advantages__icon {
+.advantage__icon {
   width: 30px;
   height: 30px;
   -o-object-fit: contain;
      object-fit: contain;
   flex-shrink: 0;
 }
-.advantages__text {
+.advantage__content {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.advantages__text-title {
+.advantage__title {
   font-family: "Alexandria", sans-serif;
   color: #E5E5E5;
   font-size: 20px;
@@ -770,7 +771,7 @@ body {
   text-align: left;
   text-transform: capitalize;
 }
-.advantages__text-text {
+.advantage__text {
   font-family: "Alexandria", sans-serif;
   font-size: 14px;
   color: #999999;
@@ -1076,30 +1077,26 @@ body {
 }
 
 .cta {
-  background: #0F0F0F;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
+  padding: 40px 0;
 }
 @media (min-width: 768px) {
   .cta {
-    padding: 80px 40px;
+    padding: 70px 0x;
   }
 }
 @media (min-width: 1440px) {
   .cta {
-    padding: 100px 80px;
+    padding: 80px 0;
   }
 }
 .cta__container {
-  width: 100%;
-  max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
   text-align: center;
+  padding: 0 20px;
 }
 .cta__badge {
   font-family: "Alexandria", sans-serif;
@@ -1133,8 +1130,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  width: 100%;
-  max-width: 320px;
   color: #999999;
   line-height: 20px;
 }
@@ -1149,7 +1144,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
