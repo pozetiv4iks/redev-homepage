@@ -1,0 +1,169 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+}
+
+.newsletter {
+  background-image: url("image.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 123px 0;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: $color-bg-overlay;
+  }
+  
+  @media (max-width: map-get($breakpoints, md)) {
+    padding: 50px 0;
+  }
+  
+  @media (max-width: map-get($breakpoints, sm)) {
+    min-height: 350px;
+    padding: 32px $spacing-md;
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 1;
+    gap: $spacing-lg;
+    max-width: 1029px;
+    padding: 0 35px;
+    margin: 0 auto;
+    
+    @media (max-width: map-get($breakpoints, md)) {
+      gap: 24px;
+    }
+  }
+  
+  &__text {
+    margin-bottom: $spacing-lg;
+    text-align: center;
+  }
+  
+  &__title {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 60px;
+    line-height: 1;
+    color: $color-white;
+    margin-bottom: $spacing-sm;
+    
+    @media (max-width: map-get($breakpoints, lg)) {
+      font-size: $font-size-h1 + 8;
+    }
+    
+    @media (max-width: map-get($breakpoints, md)) {
+      line-height: 36px;
+      font-size: 30px;
+    }
+    
+    @media (max-width: map-get($breakpoints, sm)) {
+      font-size: 28px;
+    }
+  }
+  
+  &__subtitle {
+    font-family: $font-primary;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-white;
+    margin: 0 auto;
+    
+    @media (max-width: map-get($breakpoints, lg)) {
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 380px;
+    }
+    
+    @media (max-width: map-get($breakpoints, md)) {
+      font-size: 17px;
+      line-height: 16px;
+      width: 100%;
+    }
+    
+    @media (max-width: map-get($breakpoints, sm)) {
+      font-size: 14px;
+    }
+  }
+  
+  &__form {
+    display: flex;
+    gap: $spacing-xs;
+    max-width: 653px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media (max-width: map-get($breakpoints, md)) {
+      gap: 12px;
+    }
+  }
+  
+  &__input {
+    flex: 1;
+    padding: 12px;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-none;
+    font-family: $font-primary;
+    font-size: 14px;
+    line-height: 24px;
+    outline: none;
+    
+    &::placeholder {
+      color: $color-placeholder;
+    }
+    
+    &:focus {
+      border-color: $color-black;
+    }
+    
+    @media (max-width: 767px) {
+      max-width: 100%;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-width: 126px;
+    padding: $spacing-sm $spacing-md;
+    background: $color-black;
+    color: $color-white;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    border: 1px solid $color-border;
+    border-radius: $radius-none;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12), 0px -1px 0px 0px rgba(0, 0, 0, 0.08) inset;
+    text-transform: uppercase;
+    
+    &:hover {
+      background: rgb(39.25, 39.25, 39.25);
+    }
+    
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

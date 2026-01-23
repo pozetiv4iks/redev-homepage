@@ -1,0 +1,52 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@mixin respond-to($breakpoint) {
+    @if map.has-key($breakpoints, $breakpoint) {
+        @media (max-width: map.get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin text-h1 {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-style: italic;
+    font-size: $font-size-h1;
+    line-height: $line-height-h1;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+@mixin text-h5 {
+    font-family: $font-primary;
+    font-weight: 100;
+    font-size: $font-size-h5;
+    line-height: $line-height-h5;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+@mixin button-base {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
