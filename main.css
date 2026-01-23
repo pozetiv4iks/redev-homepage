@@ -11,12 +11,7 @@ body {
 }
 
 .header {
-  width: 100%;
-  min-height: 72px;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 20px 0px;
   background-color: #000000;
 }
 @media (min-width: 768px) {
@@ -29,16 +24,26 @@ body {
     padding: 16px 80px;
   }
 }
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
 .header__logo {
   display: flex;
   align-items: center;
   gap: 8px;
+  line-height: 27px;
+  text-decoration: none;
 }
-.header__logo img {
+.header__image {
   width: 32px;
   height: 32px;
 }
-.header__logo span {
+.header__title {
   font-weight: 600;
   font-size: 18px;
   color: #E5E5E5;
@@ -70,9 +75,8 @@ body {
 .header__buttons {
   font-family: "Alexandria", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0;
+  font-size: 16px;
+  line-height: 20px;
   display: none;
 }
 @media (min-width: 768px) {
@@ -140,29 +144,24 @@ body {
 }
 
 .hero {
-  width: 100%;
   padding: 0 20px;
-  display: flex;
-  justify-content: center;
 }
 @media (min-width: 768px) {
   .hero {
-    padding: 0 40px;
+    padding: 0 60px;
   }
 }
 @media (min-width: 1440px) {
   .hero {
-    padding: 0 80px;
+    padding: 0 120px;
   }
 }
 .hero__container {
-  width: 100%;
-  max-width: 1200px;
   padding: 40px 0;
 }
 @media (min-width: 768px) {
   .hero__container {
-    padding: 60px 0;
+    padding: 70px 0;
   }
 }
 @media (min-width: 1440px) {
@@ -171,7 +170,6 @@ body {
   }
 }
 .hero__content {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,13 +188,6 @@ body {
     gap: 60px;
   }
 }
-.hero__left {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-}
 @media (min-width: 768px) {
   .hero__left {
     align-items: flex-start;
@@ -212,6 +203,7 @@ body {
   }
 }
 .hero__badge {
+  display: flex;
   font-family: "Alexandria", sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -220,6 +212,11 @@ body {
   border: 1px solid #4D4D4D;
   color: #9DFF3A;
   padding: 10px 12px;
+  margin: 0 auto 16px;
+  width: -moz-max-content;
+  width: max-content;
+  align-items: center;
+  gap: 8px;
 }
 @media (min-width: 768px) {
   .hero__badge {
@@ -237,7 +234,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 0;
   color: #9DFF3A;
 }
 .hero__title {
@@ -245,9 +241,9 @@ body {
   font-weight: 500;
   font-size: 40px;
   line-height: 1.1;
-  letter-spacing: 0;
   color: #E5E5E5;
   text-align: center;
+  margin-bottom: 16px;
 }
 @media (min-width: 768px) {
   .hero__title {
@@ -256,22 +252,18 @@ body {
     font-weight: 700;
     font-size: 64px;
     line-height: 1.1;
-    letter-spacing: 0;
     text-transform: capitalize;
   }
 }
 .hero__text {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 1;
-  letter-spacing: 0;
   color: #999999;
   text-align: center;
-  max-width: 330px;
   -moz-text-align-last: center;
        text-align-last: center;
   line-height: 20px;
+  margin-bottom: 32px;
 }
 @media (min-width: 768px) {
   .hero__text {
@@ -286,6 +278,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .hero__buttons {
@@ -296,9 +289,8 @@ body {
 .hero__btn {
   font-family: "Alexandria", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0;
+  font-size: 16px;
+  line-height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -325,8 +317,8 @@ body {
   border-color: #E5E5E5;
 }
 .hero__btn-icon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 .hero__right {
   width: 100%;
@@ -355,14 +347,9 @@ body {
 
 .brands {
   background-color: #0F0F0F;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
-  gap: 32px;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .brands {
@@ -370,31 +357,38 @@ body {
     padding-bottom: 60px;
   }
 }
+.brands__container {
+  display: flex;
+  padding: 0 20px;
+  flex-direction: column;
+  gap: 32px;
+}
 .brands__title {
   font-family: "Alexandria", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  letter-spacing: 0;
   color: #999999;
+  line-height: 20px;
+  margin-bottom: 32px;
+  text-align: center;
 }
-.brands__container {
+.brands__column {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 16px;
 }
 @media (min-width: 768px) {
-  .brands__container {
+  .brands__column {
     justify-content: space-between;
     padding: 0 40px;
   }
 }
 @media (min-width: 1440px) {
-  .brands__container {
+  .brands__column {
     padding: 0 80px;
   }
 }
@@ -427,11 +421,8 @@ body {
 }
 
 .features {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  padding: 40px 20px;
+  padding: 40px 0;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .features {
@@ -445,12 +436,18 @@ body {
     gap: 40px;
   }
 }
+.features__conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0px 20px;
+}
 .features__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  text-align: center;
   width: 100%;
   max-width: 640px;
 }
@@ -468,11 +465,8 @@ body {
   font-weight: 400;
   font-size: 28px;
   line-height: 1;
-  letter-spacing: 0;
   text-transform: capitalize;
-  width: 100%;
   color: #E5E5E5;
-  text-align: center;
 }
 @media (min-width: 768px) {
   .features__title {
@@ -480,21 +474,15 @@ body {
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
-    letter-spacing: 0;
     text-transform: capitalize;
   }
 }
 .features__text {
   font-family: "Alexandria", sans-serif;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 1;
-  letter-spacing: 0;
-  width: 100%;
   color: #999999;
-  text-align: center;
-  max-width: 330px;
   line-height: 20px;
+  margin-bottom: 32px;
 }
 @media (min-width: 768px) {
   .features__text {
@@ -506,8 +494,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
-  max-width: 1200px;
 }
 @media (min-width: 768px) {
   .features__row {
@@ -519,15 +505,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 24px;
-  width: 100%;
   padding: 30px 24px;
   border-radius: 12px;
   border: 1px solid #4D4D4D;
   background: rgba(255, 255, 255, 0.04);
-  padding: 24px;
-  width: 100%;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .features__card {
@@ -551,27 +534,21 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.4;
-  letter-spacing: 0;
   color: #E5E5E5;
-  font-weight: 500;
 }
 .features__content-text {
   font-family: "Alexandria", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  letter-spacing: 0;
   color: #999999;
-  line-height: 1.4;
+  letter-spacing: normal;
+  font-weight: normal;
+  line-height: 20px;
 }
 
 .stats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  gap: 32px;
+  padding: 40px 0px;
   background: #0F0F0F;
 }
 @media (min-width: 768px) {
@@ -589,8 +566,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  width: 100%;
-  max-width: 1200px;
+  padding: 0px 20px;
 }
 .stats__header {
   display: flex;
@@ -615,8 +591,9 @@ body {
   font-weight: 400;
   font-size: 28px;
   line-height: 1;
-  letter-spacing: 0;
   text-transform: capitalize;
+  letter-spacing: normal;
+  width: auto;
   color: #E5E5E5;
 }
 @media (min-width: 1440px) {
@@ -625,7 +602,6 @@ body {
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
-    letter-spacing: 0;
     text-transform: capitalize;
   }
 }
@@ -666,13 +642,6 @@ body {
   line-height: 1.4;
 }
 
-.advantages__cont {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-}
-
 .advantages {
   padding: 40px 0;
 }
@@ -686,6 +655,13 @@ body {
   .advantages {
     padding: 80px 80px;
   }
+}
+.advantages__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 0 20px;
 }
 .advantages__header {
   display: flex;
@@ -708,9 +684,10 @@ body {
   font-weight: 400;
   font-size: 28px;
   line-height: 1;
-  letter-spacing: 0;
   text-transform: capitalize;
   color: #E5E5E5;
+  width: auto;
+  letter-spacing: normal;
 }
 @media (min-width: 1440px) {
   .advantages__title {
@@ -718,7 +695,6 @@ body {
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
-    letter-spacing: 0;
     text-transform: capitalize;
   }
 }
@@ -838,7 +814,6 @@ body {
   font-weight: 400;
   font-size: 28px;
   line-height: 1;
-  letter-spacing: 0;
   text-transform: capitalize;
   width: 100%;
   color: #E5E5E5;
@@ -850,7 +825,6 @@ body {
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
-    letter-spacing: 0;
     text-transform: capitalize;
   }
 }
@@ -859,7 +833,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  letter-spacing: 0;
   color: #999999;
   text-align: center;
   align-self: center;
@@ -930,7 +903,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  letter-spacing: 0;
   color: #E5E5E5;
   line-height: 1.5;
   text-align: left;
@@ -967,7 +939,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 0;
   color: #E5E5E5;
   font-weight: 600;
 }
@@ -976,7 +947,6 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 1;
-  letter-spacing: 0;
   color: #999999;
 }
 
@@ -999,6 +969,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  padding: 0 20px;
 }
 .faq__header {
   display: flex;
@@ -1023,7 +994,6 @@ body {
   font-weight: 400;
   font-size: 28px;
   line-height: 1;
-  letter-spacing: 0;
   text-transform: capitalize;
   width: 100%;
   color: #E5E5E5;
@@ -1034,7 +1004,6 @@ body {
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
-    letter-spacing: 0;
     text-transform: capitalize;
   }
 }
@@ -1043,7 +1012,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  letter-spacing: 0;
   width: 100%;
   max-width: 320px;
   color: #999999;
@@ -1075,7 +1043,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  letter-spacing: 0;
   font-weight: 500;
   color: #E5E5E5;
   padding: 18px 16px;
@@ -1103,7 +1070,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 0;
   color: #999999;
   padding: 18px 16px;
   line-height: 1.6;
@@ -1149,7 +1115,6 @@ body {
   font-weight: 400;
   font-size: 28px;
   line-height: 1;
-  letter-spacing: 0;
   text-transform: capitalize;
   width: 100%;
   color: #E5E5E5;
@@ -1160,7 +1125,6 @@ body {
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
-    letter-spacing: 0;
     text-transform: capitalize;
   }
 }
@@ -1169,7 +1133,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  letter-spacing: 0;
   width: 100%;
   max-width: 320px;
   color: #999999;
@@ -1184,9 +1147,8 @@ body {
 .cta__btn {
   font-family: "Alexandria", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: 0;
+  font-size: 16px;
+  line-height: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1314,7 +1276,6 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.4;
-  letter-spacing: 0;
   color: #E5E5E5;
 }
 .footer__quick-links-list, .footer__legal-links-list,
@@ -1341,7 +1302,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 0;
   color: #999999;
   text-decoration: none;
   text-align: center;
@@ -1372,7 +1332,6 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.4;
-  letter-spacing: 0;
   text-align: left;
 }
 @media (min-width: 768px) {
@@ -1396,7 +1355,6 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 1;
-  letter-spacing: 0;
   color: #999999;
   text-align: center;
 }

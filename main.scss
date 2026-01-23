@@ -15,12 +15,7 @@ body {
 }
 
 .header {
-    width: 100%;
-    min-height: 72px;
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 20px 0px;
     background-color: $color-black;
 
     @media (min-width: $breakpoint-md) {
@@ -31,21 +26,32 @@ body {
         padding: 16px 80px;
     }
 
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1240px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
     &__logo {
         display: flex;
         align-items: center;
         gap: 8px;
+        line-height: 27px;
+        text-decoration: none;
+    }
 
-        img {
-            width: 32px;
-            height: 32px;
-        }
+    &__image {
+        width: 32px;
+        height: 32px;
+    }
 
-        span {
-            font-weight: 600;
-            font-size: 18px;
-            color: $color-white;
-        }
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        color: $color-white;
     }
 
     &__nav {
@@ -78,6 +84,7 @@ body {
     &__buttons {
         @include button-text;
         display: none;
+
         @media (min-width: $breakpoint-md) {
             display: flex;
             align-items: center;
@@ -98,7 +105,7 @@ body {
         &--login {
             background: transparent;
             color: $color-white;
-            
+
             &:hover {
                 border-color: $color-white;
                 background: rgba(255, 255, 255, 0.05);
@@ -108,7 +115,7 @@ body {
         &--primary {
             background: $color-green;
             color: $color-black;
-            
+
             &:hover {
                 opacity: 0.9;
             }
@@ -149,26 +156,21 @@ body {
 }
 
 .hero {
-    width: 100%;
     padding: 0 20px;
-    display: flex;
-    justify-content: center;
 
     @media (min-width: $breakpoint-md) {
-        padding: 0 40px;
+        padding: 0 60px;
     }
 
     @media (min-width: $breakpoint-xl) {
-        padding: 0 80px;
+        padding: 0 120px;
     }
 
     &__container {
-        width: 100%;
-        max-width: 1200px;
         padding: 40px 0;
 
         @media (min-width: $breakpoint-md) {
-            padding: 60px 0;
+            padding: 70px 0;
         }
 
         @media (min-width: $breakpoint-xl) {
@@ -177,7 +179,6 @@ body {
     }
 
     &__content {
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -196,11 +197,6 @@ body {
     }
 
     &__left {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
 
         @media (min-width: $breakpoint-md) {
             align-items: flex-start;
@@ -216,9 +212,14 @@ body {
     }
 
     &__badge {
+        display: flex;
         @include badge;
         padding: 10px 12px;
-        
+        margin: 0 auto 16px;
+        width: max-content;
+        align-items: center;
+        gap: 8px;
+
         @media (min-width: $breakpoint-md) {
             align-self: flex-start;
         }
@@ -240,6 +241,7 @@ body {
         @include title-1;
         color: $color-white;
         text-align: center;
+        margin-bottom: 16px;
 
         @media (min-width: $breakpoint-md) {
             text-align: left;
@@ -248,12 +250,13 @@ body {
     }
 
     &__text {
-        @include text-1;
+        font-family: $font-primary;
+        font-size: 16px;
         color: $color-gray1;
         text-align: center;
-        max-width: 330px;
         text-align-last: center;
         line-height: 20px;
+        margin-bottom: 32px;
 
         @media (min-width: $breakpoint-md) {
             text-align: left;
@@ -267,6 +270,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        align-items: center;
 
         @media (min-width: $breakpoint-md) {
             flex-direction: row;
@@ -306,8 +310,8 @@ body {
         }
 
         &-icon {
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
         }
     }
 
@@ -333,38 +337,41 @@ body {
         height: auto;
         object-fit: contain;
     }
-    
+
 }
 
 .brands {
     background-color: $color-gray4;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
-    gap: 32px;
+    text-align: center;
 
     @media (min-width: $breakpoint-md) {
         padding-top: 60px;
         padding-bottom: 60px;
     }
 
+    &__container {
+        display: flex;
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 32px;
+    }
+
     &__title {
         @include text-1;
         color: $color-gray1;
+        line-height: 20px;
+        margin-bottom: 32px;
+        text-align: center;
     }
 
-    &__container {
+    &__column {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 24px;
-        width: 100%;
-        max-width: 1200px;
-        padding: 0 20px;
+        column-gap: 20px;
+        row-gap: 16px;
 
         @media (min-width: $breakpoint-md) {
             justify-content: space-between;
@@ -404,12 +411,11 @@ body {
     }
 }
 
+
+
 .features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 40px 20px;
+    padding: 40px 0;
+    text-align: center;
 
     @media (min-width: $breakpoint-md) {
         padding: 60px 40px;
@@ -421,12 +427,19 @@ body {
         gap: 40px;
     }
 
+    &__conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 0px 20px;
+    }
+
     &__header {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 16px;
-        text-align: center;
         width: 100%;
         max-width: 640px;
     }
@@ -437,9 +450,7 @@ body {
 
     &__title {
         @include title-2;
-        width: 100%;
         color: $color-white;
-        text-align: center;
 
         @media (min-width: $breakpoint-md) {
             @include title-2-lg;
@@ -447,12 +458,11 @@ body {
     }
 
     &__text {
-        @include text-1;
-        width: 100%;
+        font-family: $font-primary;
+        font-size: 16px;
         color: $color-gray1;
-        text-align: center;
-        max-width: 330px;
         line-height: 20px;
+        margin-bottom: 32px;
 
         @media (min-width: $breakpoint-md) {
             max-width: 500px;
@@ -464,8 +474,6 @@ body {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        width: 100%;
-        max-width: 1200px;
 
         @media (min-width: $breakpoint-md) {
             flex-direction: row;
@@ -474,9 +482,15 @@ body {
     }
 
     &__card {
-        @include card-box;
-        padding: 24px;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 30px 24px;
+        border-radius: 12px;
+        border: 1px solid $color-gray2;
+        background: rgba(255, 255, 255, 0.04);
+        text-align: center;
 
         @media (min-width: $breakpoint-md) {
             flex: 1;
@@ -499,23 +513,19 @@ body {
     &__content-title {
         @include subtitle;
         color: $color-white;
-        font-weight: 500;
     }
 
     &__content-text {
         @include text-1;
         color: $color-gray1;
-        line-height: 1.4;
+        letter-spacing: normal;
+        font-weight: normal;
+        line-height: 20px;
     }
 }
 
 .stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    gap: 32px;
+    padding: 40px 0px;
     background: $color-gray4;
 
     @media (min-width: $breakpoint-md) {
@@ -531,8 +541,8 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 32px;
-        width: 100%;
-        max-width: 1200px;
+        padding: 0px 20px;
+
     }
 
     &__header {
@@ -551,6 +561,8 @@ body {
 
     &__title {
         @include title-2;
+        letter-spacing: normal;
+        width: auto;
         color: $color-white;
 
         @media (min-width: $breakpoint-xl) {
@@ -583,12 +595,12 @@ body {
     }
 
     &__card-title {
-      font-family: $font-primary;
-      font-size: 48px;
-      line-height: 1;
-      text-transform: capitalize;
-      margin-bottom: 12px;
-      color: $color-green;
+        font-family: $font-primary;
+        font-size: 48px;
+        line-height: 1;
+        text-transform: capitalize;
+        margin-bottom: 12px;
+        color: $color-green;
     }
 
     &__card-text {
@@ -599,12 +611,6 @@ body {
     }
 }
 
-.advantages__cont{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-}
 
 .advantages {
     padding: 40px 0;
@@ -618,6 +624,13 @@ body {
         padding: 80px 80px;
     }
 
+    &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 0 20px;
+    }
 
     &__header {
         display: flex;
@@ -634,6 +647,8 @@ body {
     &__title {
         @include title-2;
         color: $color-white;
+        width: auto;
+        letter-spacing: normal;
 
         @media (min-width: $breakpoint-xl) {
             @include title-2-lg;
@@ -691,7 +706,7 @@ body {
         padding: 24px 20px;
         border-radius: 20px;
         background: linear-gradient($color-gray4, $color-gray4) padding-box,
-                    linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) border-box;
+            linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) border-box;
         border: 1px solid transparent;
     }
 
@@ -810,8 +825,8 @@ body {
         justify-items: center;
         gap: 16px;
         width: auto;
-        @media (min-width: $breakpoint-md) {
-        }
+
+        @media (min-width: $breakpoint-md) {}
 
     }
 
@@ -819,27 +834,30 @@ body {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        width: 100%; 
-        max-width: 343px; 
+        width: 100%;
+        max-width: 343px;
         min-width: 300px;
         padding: 32px;
         border-radius: 16px;
         background: linear-gradient($color-gray4, $color-gray4) padding-box,
-                linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) border-box;
-    border: 1px solid transparent;
+            linear-gradient(272.36deg, rgba(77, 77, 77, 0.6) -14.37%, rgba(179, 179, 179, 0.6) 116.83%) border-box;
+        border: 1px solid transparent;
         text-align: left;
-         &:nth-child(n+4) {
+
+        &:nth-child(n+4) {
             display: none;
         }
+
         @media (min-width: $breakpoint-md) {
             max-width: 373px;
             max-height: 204px;
-             &:nth-child(n+4) {
-            display: flex;
-        }
+
+            &:nth-child(n+4) {
+                display: flex;
+            }
         }
     }
-    
+
 
 
     &__quote {
@@ -868,7 +886,6 @@ body {
             height: 100%;
             object-fit: cover;
             filter: grayscale(100%)
-
         }
     }
 
@@ -891,7 +908,10 @@ body {
         color: $color-gray1;
     }
 }
+
 .faq {
+
+
     padding: 40px 0;
 
     @media (min-width: $breakpoint-md) {
@@ -902,11 +922,13 @@ body {
     @media (min-width: $breakpoint-xl) {
         padding: 80px 80px 100px;
     }
-    &__conteiner{
+
+    &__conteiner {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 24px;
+        padding: 0 20px;
     }
 
     &__header {
@@ -1229,6 +1251,7 @@ body {
     &__subtitle {
         @include subtitle;
         text-align: left;
+
         @media (min-width: $breakpoint-md) {
             max-width: 198px;
         }
@@ -1255,64 +1278,65 @@ body {
             padding: 40px 0;
         }
     }
+
     &__field {
-    position: relative;
-    width: 100%;
-    max-width: 360px;
-}
-
-&__input {
-    width: 100%;
-    padding: 16px 56px 16px 0px;
-    background: transparent;
-    color: $color-white;
-    font-family: $font-primary;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    border: none;
-
-    &::placeholder {
-        color: $color-gray1;
-        opacity: 0.7;
+        position: relative;
+        width: 100%;
+        max-width: 360px;
     }
 
-    &:focus {
-        outline: none;
-        border-color: $color-green;
-        background: rgba($color-gray4, 0.3);
+    &__input {
+        width: 100%;
+        padding: 16px 56px 16px 0px;
+        background: transparent;
+        color: $color-white;
+        font-family: $font-primary;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        border: none;
+
+        &::placeholder {
+            color: $color-gray1;
+            opacity: 0.7;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $color-green;
+            background: rgba($color-gray4, 0.3);
+        }
+
+        &:hover {
+            border-color: $color-gray1;
+            background: rgba($color-gray4, 0.1);
+        }
     }
 
-    &:hover {
-        border-color: $color-gray1;
-        background: rgba($color-gray4, 0.1);
-    }
-}
+    &__submit {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        background: $color-green;
+        border: none;
+        border-radius: 15px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
 
-&__submit {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    background: $color-green;
-    border: none;
-    border-radius: 15px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
+        &:hover {
+            background: lighten($color-green, 5%);
+            transform: translateY(-50%) rotate(360deg);
+        }
 
-    &:hover {
-        background: lighten($color-green, 5%);
-        transform: translateY(-50%) rotate(360deg);
+        svg {
+            width: 14px;
+            height: 14px;
+        }
     }
-
-    svg {
-        width: 14px;
-        height: 14px;
-    }
-}
 }
