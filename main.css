@@ -10,6 +10,12 @@ body {
   color: #E5E5E5;
 }
 
+.container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 .header {
   padding: 20px 0px;
   background-color: #000000;
@@ -28,9 +34,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1240px;
-  padding: 0 20px;
-  margin: 0 auto;
 }
 .header__logo {
   display: flex;
@@ -138,28 +141,15 @@ body {
 }
 
 .hero {
-  padding: 0 20px;
-}
-@media (min-width: 768px) {
-  .hero {
-    padding: 0 60px;
-  }
-}
-@media (min-width: 1440px) {
-  .hero {
-    padding: 0 120px;
-  }
-}
-.hero__container {
   padding: 40px 0;
 }
 @media (min-width: 768px) {
-  .hero__container {
+  .hero {
     padding: 70px 0;
   }
 }
 @media (min-width: 1440px) {
-  .hero__container {
+  .hero {
     padding: 80px 0;
   }
 }
@@ -353,7 +343,6 @@ body {
 }
 .brands__container {
   display: flex;
-  padding: 0 20px;
   flex-direction: column;
   gap: 32px;
 }
@@ -430,15 +419,13 @@ body {
     gap: 40px;
   }
 }
-.features__conteiner {
-  padding: 0px 20px;
-}
 .features__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 640px;
+  margin: 0 auto 16px;
 }
 .features__badge {
   font-family: "Alexandria", sans-serif;
@@ -556,7 +543,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  padding: 0px 20px;
 }
 .stats__header {
   display: flex;
@@ -651,7 +637,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  padding: 0 20px;
 }
 .advantages__header {
   display: flex;
@@ -826,17 +811,14 @@ body {
   line-height: 1;
   color: #999999;
   text-align: center;
-  align-self: center;
   -moz-text-align-last: center;
        text-align-last: center;
   line-height: 20px;
 }
 .testimonials__slider {
-  width: 100%;
   position: relative;
   padding: 20px 0;
   overflow: hidden;
-  justify-content: center;
 }
 .testimonials__overlay--left {
   position: absolute;
@@ -922,8 +904,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  text-align: left;
-  align-items: flex-start;
 }
 .testimonials__name {
   font-family: "Alexandria", sans-serif;
@@ -942,11 +922,7 @@ body {
 }
 
 .faq {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  padding: 0 20px;
+  padding: 40px 0;
 }
 @media (min-width: 768px) {
   .faq {
@@ -960,7 +936,10 @@ body {
   }
 }
 .faq__conteiner {
-  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 .faq__header {
   display: flex;
@@ -1085,7 +1064,6 @@ body {
   justify-content: center;
   gap: 20px;
   text-align: center;
-  padding: 0 20px;
 }
 .cta__badge {
   font-family: "Alexandria", sans-serif;
