@@ -53,7 +53,6 @@
 
 // Large (Desktop) styles
 @mixin title-1-lg {
-    font-family: $font-primary;
     font-weight: 700;
     font-size: 64px;
     line-height: 1.1;
@@ -61,7 +60,6 @@
 }
 
 @mixin title-2-lg {
-    font-family: $font-primary;
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
@@ -69,7 +67,6 @@
 }
 
 @mixin title-3-lg {
-    font-family: $font-primary;
     font-weight: 400;
     font-size: 40px;
     line-height: 1;
@@ -83,28 +80,24 @@
 }
 
 @mixin button-text-lg {
-    font-family: $font-primary;
     font-weight: 400;
     font-size: 18px;
     line-height: 1;
 }
 
 @mixin text-1-lg {
-    font-family: $font-primary;
     font-weight: 400;
     font-size: 16px;
     line-height: 1;
 }
 
 @mixin text-2-lg {
-    font-family: $font-primary;
     font-weight: 400;
     font-size: 14px;
     line-height: 1;
 }
 
 @mixin caption-lg {
-    font-family: $font-primary;
     font-weight: 400;
     font-size: 12px;
     line-height: 1;

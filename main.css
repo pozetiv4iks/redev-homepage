@@ -22,7 +22,7 @@ body {
 }
 @media (min-width: 768px) {
   .header {
-    padding: 16px 40px;
+    padding: 16px 0;
   }
 }
 @media (min-width: 1440px) {
@@ -59,22 +59,6 @@ body {
     display: flex;
   }
 }
-.header__nav ul {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.header__nav a {
-  color: #999999;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-.header__nav a:hover {
-  color: #E5E5E5;
-}
 .header__buttons {
   font-family: "Alexandria", sans-serif;
   font-weight: 400;
@@ -88,6 +72,20 @@ body {
     align-items: center;
     gap: 12px;
   }
+}
+.header__items {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.header__link {
+  color: #999999;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+.header__link:hover {
+  color: #E5E5E5;
 }
 .header__btn {
   padding: 12px 24px;
@@ -204,7 +202,7 @@ body {
 }
 @media (min-width: 768px) {
   .hero__badge {
-    align-self: flex-start;
+    margin: 0 auto 16px 0;
   }
 }
 .hero__badge-dot {
@@ -232,7 +230,6 @@ body {
 @media (min-width: 768px) {
   .hero__title {
     text-align: left;
-    font-family: "Alexandria", sans-serif;
     font-weight: 700;
     font-size: 64px;
     line-height: 1.1;
@@ -267,7 +264,6 @@ body {
 @media (min-width: 768px) {
   .hero__buttons {
     flex-direction: row;
-    justify-content: flex-start;
   }
 }
 .hero__btn {
@@ -353,7 +349,6 @@ body {
   line-height: 1;
   color: #999999;
   line-height: 20px;
-  margin-bottom: 32px;
   text-align: center;
 }
 .brands__column {
@@ -409,8 +404,7 @@ body {
 }
 @media (min-width: 768px) {
   .features {
-    padding: 60px 40px;
-    gap: 32px;
+    padding: 60px 0px;
   }
 }
 @media (min-width: 1440px) {
@@ -450,11 +444,7 @@ body {
 }
 @media (min-width: 768px) {
   .features__title {
-    font-family: "Alexandria", sans-serif;
-    font-weight: 400;
     font-size: 48px;
-    line-height: 1;
-    text-transform: capitalize;
   }
 }
 .features__text {
@@ -521,7 +511,6 @@ body {
   letter-spacing: normal;
   font-weight: normal;
   line-height: 20px;
-  margin-bottom: 13px;
 }
 
 .stats {
@@ -530,12 +519,12 @@ body {
 }
 @media (min-width: 768px) {
   .stats {
-    padding: 60px 40px;
+    padding: 60px 0;
   }
 }
 @media (min-width: 1440px) {
   .stats {
-    padding: 80px 80px;
+    padding: 80px 0;
   }
 }
 .stats__container {
@@ -574,7 +563,6 @@ body {
 }
 @media (min-width: 1440px) {
   .stats__title {
-    font-family: "Alexandria", sans-serif;
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
@@ -600,6 +588,14 @@ body {
   width: 100%;
   justify-items: center;
 }
+@media (min-width: 768px) {
+  .stats__row {
+    display: flex;
+    justify-content: center;
+    -moz-column-gap: 72px;
+         column-gap: 72px;
+  }
+}
 .stats__card {
   text-align: center;
 }
@@ -623,8 +619,7 @@ body {
 }
 @media (min-width: 768px) {
   .advantages {
-    padding: 60px 40px;
-    gap: 40px;
+    padding: 60px 0;
   }
 }
 @media (min-width: 1440px) {
@@ -666,7 +661,6 @@ body {
 }
 @media (min-width: 1440px) {
   .advantages__title {
-    font-family: "Alexandria", sans-serif;
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
@@ -755,15 +749,12 @@ body {
 }
 
 .testimonials {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
   padding: 40px 20px;
   background: #0F0F0F;
 }
 @media (min-width: 768px) {
   .testimonials {
-    padding: 60px 20px;
+    padding: 60px 0;
   }
 }
 .testimonials__header {
@@ -775,6 +766,11 @@ body {
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .testimonials__header {
+    margin-bottom: 72px;
+  }
 }
 .testimonials__badge {
   font-family: "Alexandria", sans-serif;
@@ -797,7 +793,6 @@ body {
 }
 @media (min-width: 1440px) {
   .testimonials__title {
-    font-family: "Alexandria", sans-serif;
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
@@ -926,8 +921,7 @@ body {
 }
 @media (min-width: 768px) {
   .faq {
-    padding: 60px 40px 80px;
-    gap: 32px;
+    padding: 60px 0 80px;
   }
 }
 @media (min-width: 1440px) {
@@ -971,7 +965,6 @@ body {
 }
 @media (min-width: 1440px) {
   .faq__title {
-    font-family: "Alexandria", sans-serif;
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
@@ -1049,7 +1042,7 @@ body {
 }
 @media (min-width: 768px) {
   .cta {
-    padding: 70px 0x;
+    padding: 70px 0;
   }
 }
 @media (min-width: 1440px) {
@@ -1084,7 +1077,6 @@ body {
 }
 @media (min-width: 1440px) {
   .cta__title {
-    font-family: "Alexandria", sans-serif;
     font-weight: 400;
     font-size: 48px;
     line-height: 1;
@@ -1131,7 +1123,7 @@ body {
 }
 @media (min-width: 768px) {
   .footer {
-    padding: 60px 40px;
+    padding: 60px 0;
     padding-bottom: 0;
   }
 }
@@ -1146,12 +1138,11 @@ body {
 }
 @media (min-width: 768px) {
   .footer__container {
+    display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: flex-start;
-    justify-items: start;
     -moz-column-gap: 50px;
          column-gap: 50px;
-    text-align: left;
   }
 }
 .footer__logo {
@@ -1185,9 +1176,8 @@ body {
 }
 @media (min-width: 768px) {
   .footer__left {
-    justify-items: start;
-    text-align: left;
     gap: 32px;
+    margin: 0;
   }
 }
 .footer__item {
@@ -1198,7 +1188,6 @@ body {
 }
 @media (min-width: 768px) {
   .footer__item {
-    align-items: flex-start;
     text-align: left;
   }
 }
@@ -1215,12 +1204,6 @@ body {
   flex-direction: column;
   gap: 8px;
 }
-@media (min-width: 768px) {
-  .footer__list {
-    align-items: flex-start;
-    text-align: left;
-  }
-}
 .footer__link {
   font-family: "Alexandria", sans-serif;
   font-weight: 400;
@@ -1229,11 +1212,6 @@ body {
   color: #999999;
   text-decoration: none;
 }
-@media (min-width: 768px) {
-  .footer__link {
-    text-align: left;
-  }
-}
 .footer__right {
   display: flex;
   gap: 20px;
@@ -1241,7 +1219,6 @@ body {
 }
 @media (min-width: 768px) {
   .footer__right {
-    margin-top: 0;
     min-width: 385px;
   }
 }
