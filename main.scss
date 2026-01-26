@@ -770,7 +770,7 @@ body {
             bottom: 0;
             width: 100px;
             background: linear-gradient(90deg, $color-gray4 0%, transparent 100%);
-            pointer-events: none;
+            cursor: pointer;
         }
 
         &--right {

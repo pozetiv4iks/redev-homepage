@@ -803,7 +803,7 @@ body {
   bottom: 0;
   width: 100px;
   background: linear-gradient(90deg, #0F0F0F 0%, transparent 100%);
-  pointer-events: none;
+  cursor: pointer;
 }
 .testimonials__overlay--right {
   position: absolute;

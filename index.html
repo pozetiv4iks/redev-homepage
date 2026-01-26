@@ -201,11 +201,11 @@
             <h2 class="testimonials__title">Trusted by Innovators</h2>
             <p class="testimonials__text">Secure your digital assets with the peace of mind that comes from knowing you are protected by the best technology in the blockchain space.</p>
             </div>
-            <div class="testimonials__slider">
+            <div class="testimonials__slider swiper">
             <div class="testimonials__overlay testimonials__overlay--left"></div>
             <div class="testimonials__overlay testimonials__overlay--right"></div>
-            <div class="testimonials__cards">
-                <div class="testimonials__card">
+            <div class="testimonials__cards swiper-wrapper">
+                <div class="testimonials__card swiper-slide">
                 <p class="testimonials__quote">“AI streamlines international client coordination by scheduling emails for optimal inbox timing.”</p>
                 <div class="testimonials__author">
                     <div class="testimonials__avatar">
@@ -217,7 +217,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="testimonials__card">
+                <div class="testimonials__card swiper-slide">
                 <p class="testimonials__quote">“AI streamlines international client coordination by scheduling emails for optimal inbox timing.”</p>
                 <div class="testimonials__author">
                     <div class="testimonials__avatar">
@@ -229,7 +229,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="testimonials__card">
+                <div class="testimonials__card swiper-slide">
                 <p class="testimonials__quote">“AI streamlines international client coordination by scheduling emails for optimal inbox timing.”</p>
                 <div class="testimonials__author">
                     <div class="testimonials__avatar">
@@ -241,7 +241,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="testimonials__card">
+                <div class=" testimonials__card swiper-slide">
                 <p class="testimonials__quote">“AI streamlines international client coordination by scheduling emails for optimal inbox timing.”</p>
                 <div class="testimonials__author">
                     <div class="testimonials__avatar">
@@ -351,4 +351,30 @@
       </div>
     </footer>
   </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.testimonials__slider', {
+        wrapperClass: 'testimonials__cards',
+        slideClass: 'testimonials__card',
+        slidesPerView: 1,
+        spaceBetween: 16,
+        
+        autoplay: {
+            pauseOnMouseEnter: true, 
+            loop:true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 16
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 16
+            }
+        }
+    });
+});
+</script>
 </html>
